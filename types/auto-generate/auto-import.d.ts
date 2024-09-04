@@ -69,6 +69,7 @@ declare global {
   const useCssVars: typeof import('vue')['useCssVars']
   const useEnv: typeof import('../../src/hooks/useEnv')['default']
   const useLink: typeof import('vue-router')['useLink']
+  const useModal: typeof import('../../src/hooks/useModal')['default']
   const useNProgress: typeof import('../../src/hooks/useNProgress')['default']
   const useResize: typeof import('../../src/hooks/useResize')['default']
   const useRoute: typeof import('vue-router')['useRoute']
