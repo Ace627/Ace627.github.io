@@ -53,6 +53,5 @@
   },
   "resolutions": {
     "bin-wrapper": "npm:bin-wrapper-china"
-  },
-  "packageManager": "pnpm@9.9.0"
+  }
 }
