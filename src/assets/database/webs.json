@@ -1,0 +1,48 @@
+[
+  {
+    "type": "零点内部",
+    "children": [
+      { "title": "零点协作系统", "link": "http://172.16.0.196/loginController.do?login" },
+      { "title": "互联网访问认证", "link": "http://172.16.0.254:8008/portal/local/index.html?uplcyid=2&weburl=" },
+      { "title": "ChatGPT", "link": "https://chatgpt.com" },
+      { "title": "文心一言", "link": "https://yiyan.baidu.com" },
+      { "title": "代码截图美化", "link": "https://www.dute.org/code-snapshot" }
+    ]
+  },
+  {
+    "type": "前端文档",
+    "children": [
+      { "title": "Element Plus", "link": "https://element-plus.org/zh-CN/component/button.html" },
+      { "title": "Ant Design Vue", "link": "https://www.antdv.com/components/overview-cn" },
+      { "title": "UnoCSS 中文网", "link": "https://unocss.nodejs.cn" },
+      { "title": "UnoCSS 样式速查表", "link": "https://unocss.dev/interactive" },
+      { "title": "Axios 中文文档", "link": "https://www.axios-http.cn" },
+      { "title": "DayJS 中文网", "link": "https://dayjs.fenxianglu.cn" },
+      { "title": "VueUse 中文网", "link": "https://vueuse.nodejs.cn" },
+      { "title": "Pinia 中文文档", "link": "https://pinia.vuejs.org/zh" },
+      { "title": "京东微前端", "link": "https://micro-zoe.github.io/micro-app" },
+      { "title": "Canvas 中文文档", "link": "https://www.canvasapi.cn" },
+      { "title": "Electron 中文文档", "link": "https://electron.nodejs.cn" },
+      { "title": "Vue3 中文文档", "link": "https://cn.vuejs.org/guide/introduction.html" },
+      { "title": "VueRouter 中文文档", "link": "https://router.vuejs.org/zh/guide" },
+      { "title": "Vite 中文文档", "link": "https://cn.vitejs.dev/config" }
+    ]
+  },
+  {
+    "type": "实用工具",
+    "children": [
+      { "title": "GitMind 思维导图", "link": "https://gitmind.cn" },
+      { "title": "PDF24 Tools", "link": "https://tools.pdf24.org/zh" },
+      { "title": "一个工具箱", "link": "http://www.atoolbox.net" },
+      { "title": "一个木函", "link": "https://ol.woobx.cn" },
+      { "title": "UU在线工具", "link": "https://uutool.cn" },
+      { "title": "九九参考计算网", "link": "https://www.99cankao.com" },
+      { "title": "便民查询网", "link": "https://www.bmcx.com" },
+      { "title": "MikuTools", "link": "https://tools.miku.ac" },
+      { "title": "七七工具箱", "link": "https://www.tool77.com" },
+      { "title": "日历精灵", "link": "https://www.5adanci.com" },
+      { "title": "大米工具网", "link": "https://tool.qqsuu.cn" },
+      { "title": "中国古典颜色手册", "link": "https://colors.ichuantong.cn" }
+    ]
+  }
+]
