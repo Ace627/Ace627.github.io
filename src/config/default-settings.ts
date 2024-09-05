@@ -11,7 +11,7 @@ export interface ProjectConfig {
   /** 是否显示色弱模式 */
   showColorWeakness: boolean
   /** 内容区域转场动效 */
-  transitionName: 'fade-transform'
+  transitionName: 'fade-transform' | 'el-zoom-in-center' | 'el-zoom-in-top' | 'el-zoom-in-bottom' | 'el-fade-in-linear' | 'el-fade-in'
 }
 
 /** 默认配置 */

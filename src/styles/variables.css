@@ -2,6 +2,6 @@
 
 :root {
   --ap-navbar-height: 50px;
-  --ap-header-height: var(--app-navbar-height);
-  --ap-content-height: calc(100vh - var(--app-header-height));
+  --ap-header-height: var(--ap-navbar-height);
+  --ap-content-height: calc(100vh - var(--ap-header-height));
 }

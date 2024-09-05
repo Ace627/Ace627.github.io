@@ -110,6 +110,12 @@
         "desc": "DayJS 是一个极简的 JavaScript 库，可以为现代浏览器解析、验证、操作和显示日期和时间"
       },
       {
+        "title": "Lodash 中文文档",
+        "link": "https://www.lodashjs.com",
+        "icon": "https://www.lodashjs.com/img/favicon.ico",
+        "desc": "Lodash 是一个一致性、模块化、高性能的 JavaScript 实用工具库"
+      },
+      {
         "title": "VueUse 中文网",
         "link": "https://vueuse.nodejs.cn",
         "icon": "https://vueuse.nodejs.cn/favicon.svg",
@@ -162,6 +168,18 @@
         "link": "https://larryzhu-dev.github.io/autoLarryPages/autofit.js",
         "icon": "https://larryzhu-dev.github.io/autoLarryPages/autofit.js/assets/autofit.CjIljoZR.png",
         "desc": "迄今为止最易用的屏幕自适应工具，大屏适配仅需一行代码"
+      },
+      {
+        "title": "NestJS 中文文档",
+        "link": "http://nestjs.inode.club",
+        "icon": "http://nestjs.inode.club/assets/favicons/favicon-32x32.png",
+        "desc": "Nest 是一个用于构建高效、可扩展的 Node.js 服务器端应用程序的框架。它使用逐步式的 JavaScript，基于 TypeScript 构建，并结合了面向对象编程（OOP）、函数式编程（FP）和函数式响应式编程（FRP）的元素"
+      },
+      {
+        "title": "TypeORM 中文文档",
+        "link": "https://www.typeorm.org",
+        "icon": "https://www.typeorm.org/img/favicon.ico",
+        "desc": "TypeORM 是一个ORM，可以在 NodeJS、浏览器、Cordova、PhoneGap、Ionic、React Native、NativeScript、Expo 和 Electron 平台上运行，并且可以与 TypeScript 和 JavaScript（ES5、ES6、ES7、ES8）一起使用。其目标是始终支持最新的 JavaScript 功能并提供额外功能，帮助您开发使用数据库的任何类型的应用程序 - 从具有几个表的小型应用程序到具有多个数据库的大型企业级应用程序"
       }
     ]
   },
@@ -252,6 +270,18 @@
     "type": "资源网站",
     "children": [
       {
+        "title": "423Down",
+        "link": "https://www.423down.com",
+        "icon": "https://www.423down.com/wp-content/themes/D7/img/favicon.ico",
+        "desc": "更新快、专注去广告类软件输出10年、个人IP品牌软件分享站"
+      },
+      {
+        "title": "精品软件区",
+        "link": "https://www.52pojie.cn/forum-16-1.html",
+        "icon": "https://www.52pojie.cn/favicon.ico",
+        "desc": "精品软件推荐，软件交流天地，汇集众多精彩评论，热心会员每日更新。找你所需要的，给你我分享的！这里不但有PC软件，安卓、iPhone等手机软件也统统包含"
+      },
+      {
         "title": "油小猴",
         "link": "https://www.youxiaohou.com",
         "icon": "https://www.youxiaohou.com/apple-touch-icon.png",
@@ -292,6 +322,12 @@
         "link": "https://sigu.app",
         "icon": "https://sigu.app/favicon.ico",
         "desc": "思古影视线路检测中心，反应时间越小,打开就越快"
+      },
+      {
+        "title": "免费节点订阅",
+        "link": "https://v2rayshare.com/f/freenode",
+        "icon": "https://v2rayshare.com/favicon.ico",
+        "desc": "一个纯公益免费节点分享网站，提供免费节点订阅链接，服务覆盖SSR/V2ray//Vmess/Clash等主流协议，支持Trojan/v2ray/Clash/Shadowrocket/Quantumult等主流客户端"
       }
     ]
   },
