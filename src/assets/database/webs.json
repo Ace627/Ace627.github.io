@@ -161,7 +161,7 @@
         "title": "autofit.js",
         "link": "https://larryzhu-dev.github.io/autoLarryPages/autofit.js",
         "icon": "https://larryzhu-dev.github.io/autoLarryPages/autofit.js/assets/autofit.CjIljoZR.png",
-        "desc": "迄今为止最易用的大屏自适应工具"
+        "desc": "迄今为止最易用的屏幕自适应工具，大屏适配仅需一行代码"
       }
     ]
   },
@@ -233,6 +233,18 @@
         "link": "https://colors.ichuantong.cn",
         "icon": "https://colors.ichuantong.cn/favicon-32x32.png",
         "desc": "中国传统颜色查看复制"
+      },
+      {
+        "title": "全民简历",
+        "link": "https://www.qmjianli.com",
+        "icon": "https://www.qmjianli.com/favicon.ico",
+        "desc": "全民简历网是专业的在线简历制作、简历模板下载网站。提供大量原创设计的个人简历模板，包括各种职业和大学生简历模板，让求职者快速制作出高质量简历，服务超800万用户！"
+      },
+      {
+        "title": "CodeCV 简历",
+        "link": "https://codecv.top/templates",
+        "icon": "https://codecv.top/favicon.ico",
+        "desc": "40+简约高颜值简历模板免费使用,在线编辑,一键导出PDF,让简历制作更简单更高效!"
       }
     ]
   },
@@ -268,6 +280,71 @@
         "link": "https://pic.netbian.com",
         "icon": "https://pic.netbian.com/favicon.ico",
         "desc": "精选高清4K壁纸大全"
+      },
+      {
+        "title": "App 影视",
+        "link": "https://www.appmovie.art",
+        "icon": "https://cdn.wyteam.net/webapps/maccms/template/blueghost/img/favicon.ico",
+        "desc": "提供最新最快的影视资讯和在线播放"
+      },
+      {
+        "title": "思古影视导航",
+        "link": "https://sigu.app",
+        "icon": "https://sigu.app/favicon.ico",
+        "desc": "思古影视线路检测中心，反应时间越小,打开就越快"
+      }
+    ]
+  },
+  {
+    "type": "开源项目",
+    "children": [
+      {
+        "title": "小米运动刷步",
+        "link": "https://github.com/Ace627/mi-sport",
+        "icon": "https://github.com/fluidicon.png",
+        "desc": "利用小米运动刷微信和支付宝运动的步数"
+      },
+      {
+        "title": "vite-vue3-template",
+        "link": "https://github.com/Ace627/vite-vue3-template",
+        "icon": "https://github.com/fluidicon.png",
+        "desc": "一个基础的 Vue3、TypeScript、Vite 的配置模板"
+      },
+      {
+        "title": "JS 的算法与数据结构",
+        "link": "https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md",
+        "icon": "https://github.com/fluidicon.png",
+        "desc": "包含了多种基于 JavaScript 的算法与数据结构,每种算法和数据结构都有自己的 README，包含相关说明和链接，以便进一步阅读 (还有 YouTube 视频) "
+      },
+      {
+        "title": "NodeJS 最佳实践",
+        "link": "https://github.com/goldbergyoni/nodebestpractices/blob/master/README.chinese.md",
+        "icon": "https://github.com/fluidicon.png",
+        "desc": "对 NodeJS 最佳实践中排名最高的内容的总结和分享"
+      },
+      {
+        "title": "程序员做饭指南",
+        "link": "https://github.com/Anduin2017/HowToCook",
+        "icon": "https://github.com/fluidicon.png",
+        "desc": "程序员在家做饭方法指南"
+      },
+      {
+        "title": "中国个人项目列表",
+        "link": "https://github.com/1c7/chinese-independent-developer/?tab=readme-ov-file",
+        "icon": "https://github.com/fluidicon.png",
+        "desc": "聚合所有中国独立开发者的项目"
+      },
+      {
+        "title": "CSS 效果图合集",
+        "link": "https://gitee.com/qm1989/css_effect_map_collection",
+        "icon": "https://gitee.com/favicon.ico",
+        "desc": "收集网上的一些好看的 CSS 效果图"
+      },
+      {
+        "title": "若依后台管理系统",
+        "link": "https://gitee.com/y_project/RuoYi-Vue",
+        "icon": "https://gitee.com/favicon.ico",
+        "desc": "若依是一套全部开源的快速开发平台，毫无保留给个人及企业免费使用"
       }
     ]
   }
