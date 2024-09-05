@@ -2,47 +2,223 @@
   {
     "type": "零点内部",
     "children": [
-      { "title": "零点协作系统", "link": "http://172.16.0.196/loginController.do?login" },
-      { "title": "互联网访问认证", "link": "http://172.16.0.254:8008/portal/local/index.html?uplcyid=2&weburl=" },
-      { "title": "ChatGPT", "link": "https://chatgpt.com" },
-      { "title": "文心一言", "link": "https://yiyan.baidu.com" },
-      { "title": "代码截图美化", "link": "https://www.dute.org/code-snapshot" }
+      {
+        "title": "零点协作系统",
+        "link": "http://172.16.0.196/loginController.do?login",
+        "icon": "https://www.idataway.com/favicon.ico"
+      },
+      {
+        "title": "互联网访问认证",
+        "link": "http://172.16.0.254:8008/portal/local/index.html?uplcyid=2&weburl=",
+        "icon": "https://www.idataway.com/favicon.ico"
+      },
+      {
+        "title": "ChatGPT",
+        "link": "https://chatgpt.com",
+        "icon": "https://image.baidu.com/search/detail?ct=503316480&z=undefined&tn=baiduimagedetail&ipn=d&word=chatgpt%20logo&step_word=&lid=6200947667600800294&ie=utf-8&in=&cl=2&lm=-1&st=undefined&hd=undefined&latest=undefined&copyright=undefined&cs=1142566418,1314362628&os=2054954419,461964914&simid=3335532266,262097972&pn=15&rn=1&di=7400427937490534401&ln=1618&fr=&fmq=1725515387669_R&fm=&ic=undefined&s=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&is=0,0&istype=0&ist=&jit=&bdtype=0&spn=0&pi=0&gsm=1e&objurl=https%3A%2F%2Ft12.baidu.com%2Fit%2Fu%3D3889196102%2C199724547%26fm%3D30%26app%3D106%26f%3DJPEG%3Fw%3D640%26h%3D640%26s%3D6B243A62FEF71BB350A990CB0000A0A1&rpstart=0&rpnum=0&adpicid=0&nojc=undefined&dyTabStr=MCwzLDEsMiwxMyw3LDYsNSwxMiw5",
+        "desc": "OpenAi 的人工智能数据大模型"
+      },
+      {
+        "title": "文心一言",
+        "link": "https://yiyan.baidu.com",
+        "icon": "https://nlp-eb.cdn.bcebos.com/logo/favicon.ico",
+        "desc": "百度的人工智能数据大模型"
+      },
+      {
+        "title": "代码截图美化",
+        "link": "https://www.dute.org/code-snapshot",
+        "icon": "https://cdn.tool.dute.me/assets/images/web/favicon.ico",
+        "desc": "源代码生成图片工具"
+      },
+      {
+        "title": "端对端传文件",
+        "link": "https://wormhole.app",
+        "icon": "http://navigation.devops.horizon-china.cn/img/wormhole.png",
+        "desc": "简单，私密的文件分享"
+      }
     ]
   },
   {
     "type": "前端文档",
     "children": [
-      { "title": "Element Plus", "link": "https://element-plus.org/zh-CN/component/button.html" },
-      { "title": "Ant Design Vue", "link": "https://www.antdv.com/components/overview-cn" },
-      { "title": "UnoCSS 中文网", "link": "https://unocss.nodejs.cn" },
-      { "title": "UnoCSS 样式速查表", "link": "https://unocss.dev/interactive" },
-      { "title": "Axios 中文文档", "link": "https://www.axios-http.cn" },
-      { "title": "DayJS 中文网", "link": "https://dayjs.fenxianglu.cn" },
-      { "title": "VueUse 中文网", "link": "https://vueuse.nodejs.cn" },
-      { "title": "Pinia 中文文档", "link": "https://pinia.vuejs.org/zh" },
-      { "title": "京东微前端", "link": "https://micro-zoe.github.io/micro-app" },
-      { "title": "Canvas 中文文档", "link": "https://www.canvasapi.cn" },
-      { "title": "Electron 中文文档", "link": "https://electron.nodejs.cn" },
-      { "title": "Vue3 中文文档", "link": "https://cn.vuejs.org/guide/introduction.html" },
-      { "title": "VueRouter 中文文档", "link": "https://router.vuejs.org/zh/guide" },
-      { "title": "Vite 中文文档", "link": "https://cn.vitejs.dev/config" }
+      {
+        "title": "Element Plus",
+        "link": "https://element-plus.org/zh-CN/component/button.html",
+        "icon": "https://element-plus.org/images/element-plus-logo-small.svg",
+        "desc": "基于 Vue 3，面向设计师和开发者的组件库"
+      },
+      {
+        "title": "Ant Design Vue",
+        "link": "https://www.antdv.com/components/overview-cn",
+        "icon": "https://aliyuncdn.antdv.com/favicon.ico",
+        "desc": "为 Web 应用提供了丰富的基础 UI 组件"
+      },
+      {
+        "title": "Apache ECharts",
+        "link": "https://echarts.apache.org/zh/index.html",
+        "icon": "https://echarts.apache.org/zh/images/favicon.png?_v_=20240226",
+        "desc": "一个基于 JavaScript 的开源可视化图表库"
+      },
+      {
+        "title": "UnoCSS 中文网",
+        "link": "https://unocss.nodejs.cn",
+        "icon": "https://unocss.nodejs.cn/favicon.ico",
+        "desc": "即时按需的原子化 CSS 引擎"
+      },
+      {
+        "title": "UnoCSS 样式速查表",
+        "link": "https://unocss.dev/interactive",
+        "icon": "https://unocss.nodejs.cn/favicon.ico",
+        "desc": "对原子样式写法的快速查询"
+      },
+      {
+        "title": "Axios 中文文档",
+        "link": "https://www.axios-http.cn",
+        "icon": "https://www.axios-http.cn/img/favicon.ico",
+        "desc": "Axios 是一个基于 Promise 的网络请求库，可以用于浏览器和 NodeJS"
+      },
+      {
+        "title": "DayJS 中文网",
+        "link": "https://dayjs.fenxianglu.cn",
+        "icon": "https://dayjs.fenxianglu.cn/assets/favicon.png",
+        "desc": "DayJS 是一个极简的 JavaScript 库，可以为现代浏览器解析、验证、操作和显示日期和时间"
+      },
+      {
+        "title": "VueUse 中文网",
+        "link": "https://vueuse.nodejs.cn",
+        "icon": "https://vueuse.nodejs.cn/favicon.svg",
+        "desc": "基础 Vue 组合式工具的集合"
+      },
+      {
+        "title": "Pinia 中文文档",
+        "link": "https://pinia.vuejs.org/zh",
+        "icon": "https://pinia.vuejs.org/logo.svg",
+        "desc": "符合直觉的 Vue.js 状态管理库"
+      },
+      {
+        "title": "京东微前端",
+        "link": "https://micro-zoe.github.io/micro-app",
+        "icon": "https://micro-zoe.github.io/micro-app/favicon.ico",
+        "desc": "一款简约、高效、功能强大的微前端框架"
+      },
+      {
+        "title": "Canvas 中文文档",
+        "link": "https://www.canvasapi.cn",
+        "icon": "https://www.canvasapi.cn/favicon.ico",
+        "desc": "提供详尽的 Canvas Api 使用指南和学习案例"
+      },
+      {
+        "title": "Electron 中文文档",
+        "link": "https://electron.nodejs.cn",
+        "icon": "https://electron.nodejs.cn/assets/img/favicon.ico",
+        "desc": "使用 JavaScript、HTML 和 CSS 构建跨平台桌面应用"
+      },
+      {
+        "title": "Vue3 中文文档",
+        "link": "https://cn.vuejs.org/guide/introduction.html",
+        "icon": "https://router.vuejs.org/logo.svg",
+        "desc": "一款渐进式的 JavaScript 框架"
+      },
+      {
+        "title": "VueRouter 中文文档",
+        "link": "https://router.vuejs.org/zh/guide",
+        "icon": "https://router.vuejs.org/logo.svg",
+        "desc": "Vue.js 的官方路由"
+      },
+      {
+        "title": "Vite 中文文档",
+        "link": "https://cn.vitejs.dev/config",
+        "icon": "https://cn.vitejs.dev/logo.svg",
+        "desc": "下一代前端工具链"
+      }
     ]
   },
   {
     "type": "实用工具",
     "children": [
-      { "title": "GitMind 思维导图", "link": "https://gitmind.cn" },
-      { "title": "PDF24 Tools", "link": "https://tools.pdf24.org/zh" },
-      { "title": "一个工具箱", "link": "http://www.atoolbox.net" },
-      { "title": "一个木函", "link": "https://ol.woobx.cn" },
-      { "title": "UU在线工具", "link": "https://uutool.cn" },
-      { "title": "九九参考计算网", "link": "https://www.99cankao.com" },
-      { "title": "便民查询网", "link": "https://www.bmcx.com" },
-      { "title": "MikuTools", "link": "https://tools.miku.ac" },
-      { "title": "七七工具箱", "link": "https://www.tool77.com" },
-      { "title": "日历精灵", "link": "https://www.5adanci.com" },
-      { "title": "大米工具网", "link": "https://tool.qqsuu.cn" },
-      { "title": "中国古典颜色手册", "link": "https://colors.ichuantong.cn" }
+      {
+        "title": "GitMind 思维导图",
+        "link": "https://gitmind.cn",
+        "icon": "https://qncdn.aoscdn.com/astro/gitmind/_astro/favicon-32@32w.dc79bcef.png",
+        "desc": "一款全平台的在线思维导图脑图架构图制作软件工具"
+      },
+      {
+        "title": "PDF24 Tools",
+        "link": "https://tools.pdf24.org/zh",
+        "icon": "https://tools.pdf24.org/static/img/pdf24.png?v=658057a1",
+        "desc": "免费且易于使用的在线PDF工具"
+      },
+      {
+        "title": "一个工具箱",
+        "link": "http://www.atoolbox.net",
+        "icon": "http://www.atoolbox.net/favicon.ico",
+        "desc": "好用的在线工具都在这里"
+      },
+      {
+        "title": "一个木函",
+        "link": "https://ol.woobx.cn",
+        "icon": "https://ol.woobx.cn/favicon.ico",
+        "desc": "多功能效率工具箱"
+      },
+      {
+        "title": "UU在线工具",
+        "link": "https://uutool.cn",
+        "icon": "https://uutool.cn/assets/images/favicon.png",
+        "desc": "便捷实用的工具集合站"
+      },
+      {
+        "title": "九九参考计算网",
+        "link": "https://www.99cankao.com",
+        "icon": "https://www.99cankao.com/favicon.ico",
+        "desc": "数学计算、算命、啥都算"
+      },
+      {
+        "title": "便民查询网",
+        "link": "https://www.bmcx.com",
+        "icon": "https://f.bmcx.com/img/index_ico/i_c_o_114x114.png",
+        "desc": "致力于为网民提供方便、快捷的在线查询服务"
+      },
+      {
+        "title": "MikuTools",
+        "link": "https://tools.miku.ac",
+        "icon": "https://mikutools.cdn.hatsune.tech/icons/icon_64x64.3ecd30.png",
+        "desc": "一个轻量的工具集合"
+      },
+      {
+        "title": "七七工具箱",
+        "link": "https://www.tool77.com",
+        "icon": "https://www.tool77.com/media/image/favicon.ico",
+        "desc": "提供基于网页的在线工具 用完即走"
+      },
+      {
+        "title": "日历精灵",
+        "link": "https://www.5adanci.com",
+        "icon": "https://cdn.5adanci.com/com/assets/img/favicon.ico",
+        "desc": "各种日历表打印下载 "
+      },
+      {
+        "title": "中国古典颜色手册",
+        "link": "https://colors.ichuantong.cn",
+        "icon": "https://colors.ichuantong.cn/favicon-32x32.png",
+        "desc": "中国传统颜色查看复制"
+      }
+    ]
+  },
+  {
+    "type": "资源网站",
+    "children": [
+      {
+        "title": "油小猴",
+        "link": "https://www.youxiaohou.com",
+        "icon": "https://www.youxiaohou.com/apple-touch-icon.png",
+        "desc": "一个汇聚了各种黑科技的小站"
+      },
+      {
+        "title": "油猴脚本库",
+        "link": "https://greasyfork.org/zh-CN/scripts",
+        "icon": "https://greasyfork.org/vite/assets/blacklogo16-DftkYuVe.png",
+        "desc": "针对您所访问的网站添加功能或解决问题的用户脚本"
+      }
     ]
   }
 ]
