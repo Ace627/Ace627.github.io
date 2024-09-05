@@ -3,14 +3,28 @@
     "type": "零点内部",
     "children": [
       {
+        "title": "Gitee",
+        "link": "https://gitee.com",
+        "icon": "https://gitee.com/favicon.ico",
+        "desc": "国内开发者常用的代码托管平台"
+      },
+      {
         "title": "零点协作系统",
         "link": "http://172.16.0.196/loginController.do?login",
-        "icon": "https://www.idataway.com/favicon.ico"
+        "icon": "https://www.idataway.com/favicon.ico",
+        "desc": "内部网站"
       },
       {
         "title": "互联网访问认证",
         "link": "http://172.16.0.254:8008/portal/local/index.html?uplcyid=2&weburl=",
-        "icon": "https://www.idataway.com/favicon.ico"
+        "icon": "https://www.idataway.com/favicon.ico",
+        "desc": "内部网站"
+      },
+      {
+        "title": "彩云小译",
+        "link": "hhttps://fanyi.caiyunapp.com",
+        "icon": "https://fanyi.caiyunapp.com/favicon.ico",
+        "desc": "高效准确的翻译工具"
       },
       {
         "title": "ChatGPT",
@@ -31,10 +45,16 @@
         "desc": "源代码生成图片工具"
       },
       {
+        "title": "虚拟白板",
+        "link": "https://excalidraw.com",
+        "icon": "https://excalidraw.com/favicon-16x16.png",
+        "desc": "素描手绘图的虚拟白板"
+      },
+      {
         "title": "端对端传文件",
         "link": "https://wormhole.app",
         "icon": "http://navigation.devops.horizon-china.cn/img/wormhole.png",
-        "desc": "简单，私密的文件分享"
+        "desc": "让你能以端到端加密和自动过期链接的方式分享文件，可以确保你分享的文件私密且不会一直留在互联网上。"
       }
     ]
   },
@@ -70,6 +90,12 @@
         "link": "https://unocss.dev/interactive",
         "icon": "https://unocss.nodejs.cn/favicon.ico",
         "desc": "对原子样式写法的快速查询"
+      },
+      {
+        "title": "阿里字体图标库",
+        "link": "https://www.iconfont.cn",
+        "icon": "https://img.alicdn.com/imgextra/i4/O1CN01Z5paLz1O0zuCC7osS_!!6000000001644-55-tps-83-82.svg",
+        "desc": "国内功能很强大且图标内容很丰富的矢量图标库，提供矢量图标下载、在线存储、格式转换等功能"
       },
       {
         "title": "Axios 中文文档",
@@ -130,6 +156,12 @@
         "link": "https://cn.vitejs.dev/config",
         "icon": "https://cn.vitejs.dev/logo.svg",
         "desc": "下一代前端工具链"
+      },
+      {
+        "title": "autofit.js",
+        "link": "https://larryzhu-dev.github.io/autoLarryPages/autofit.js",
+        "icon": "https://larryzhu-dev.github.io/autoLarryPages/autofit.js/assets/autofit.CjIljoZR.png",
+        "desc": "迄今为止最易用的大屏自适应工具"
       }
     ]
   },
@@ -218,6 +250,24 @@
         "link": "https://greasyfork.org/zh-CN/scripts",
         "icon": "https://greasyfork.org/vite/assets/blacklogo16-DftkYuVe.png",
         "desc": "针对您所访问的网站添加功能或解决问题的用户脚本"
+      },
+      {
+        "title": "极简壁纸",
+        "link": "https://bz.zzzmh.cn/index",
+        "icon": "https://bz.zzzmh.cn/favicon.ico",
+        "desc": "海量电脑桌面壁纸美图"
+      },
+      {
+        "title": "拾光壁纸",
+        "link": "https://snake.timeline.ink/random",
+        "icon": "https://snake.timeline.ink/favicon.ico",
+        "desc": "干净、舒适、流畅的桌面壁纸网站"
+      },
+      {
+        "title": "彼岸图网",
+        "link": "https://pic.netbian.com",
+        "icon": "https://pic.netbian.com/favicon.ico",
+        "desc": "精选高清4K壁纸大全"
       }
     ]
   }

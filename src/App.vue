@@ -1,16 +1,19 @@
 <template>
   <div class="app-content">
     <div class="list" v-for="(item, index) in webs" :key="index">
-      <div class="list__title">{{ item.type }}</div>
+      <div class="list__title" @dblclick="downloadDatabase">{{ item.type }}</div>
       <ApWrapList :min-width="150" :gap="16">
-        <el-link class="list__item" :href="v.link" target="_blank" v-for="(v, i) in item.children" :key="i">
-          <!-- 网址图标 加载失败或无 则显示 系统 logo -->
-          <el-image :src="v.icon" lazy class="wh-20px mx-8px">
-            <template #error> <el-image :src="logo" class="wh-20px" /> </template>
-          </el-image>
-          <!-- 网站标题 -->
-          <span>{{ v.title }}</span>
-        </el-link>
+        <el-tooltip v-for="(v, i) in item.children" :key="i" placement="top-start" :show-after="200">
+          <template #content>
+            <div class="max-w-200px break-all text-justify">{{ v.desc }}</div>
+          </template>
+          <el-link class="list__item" :href="v.link" target="_blank">
+            <el-image :src="v.icon" lazy class="wh-20px mx-8px">
+              <template #error> <el-image :src="logo" class="wh-20px" /> </template>
+            </el-image>
+            <span>{{ v.title }}</span>
+          </el-link>
+        </el-tooltip>
       </ApWrapList>
     </div>
   </div>
@@ -20,13 +23,28 @@
 defineOptions({ name: 'App' })
 import webs from '@/assets/database/webs.json'
 import logo from '@/assets/images/logo.png'
+import { linkDownload } from './utils/download'
+
+function downloadDatabase() {
+  const blob = new Blob([JSON.stringify(webs, null, '  ')], { type: 'application/json' })
+  const tempURL = URL.createObjectURL(blob)
+  linkDownload(tempURL)
+  URL.revokeObjectURL(tempURL)
+}
 </script>
 
 <style lang="scss" scoped>
+.app-content {
+  min-height: 100%;
+  // background-image: linear-gradient(135deg, #fff, #000);
+
+  // backdrop-filter: blur(18px);
+}
 .list {
   width: 960px;
   max-width: 100%;
   margin: 0 auto;
+
   &__title {
     margin-bottom: 16px;
     padding: 4px 0 4px 10px;
