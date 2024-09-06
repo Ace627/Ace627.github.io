@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-defineOptions({ name: 'ApWrapList' })
+defineOptions({ name: 'AutoWrapList' })
 import { isString } from 'lodash-es'
 
 const props = defineProps({

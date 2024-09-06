@@ -2,7 +2,7 @@
   <div class="app-content">
     <div class="list" v-for="(item, index) in webs" :key="index">
       <div class="list__title" @dblclick="downloadDatabase">{{ item.type }}</div>
-      <ApWrapList :min-width="150" :gap="16">
+      <AutoWrapList :min-width="150" :gap="16">
         <el-tooltip v-for="(v, i) in item.children" :key="i" placement="top-start" :show-after="200">
           <template #content>
             <div class="max-w-320px break-all text-justify">{{ v.desc }}</div>
@@ -14,7 +14,7 @@
             <span>{{ v.title }}</span>
           </el-link>
         </el-tooltip>
-      </ApWrapList>
+      </AutoWrapList>
     </div>
 
     <!-- <p v-for="(item, index) in 999" :key="index">{{ item }}</p> -->
