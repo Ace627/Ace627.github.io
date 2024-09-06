@@ -14,6 +14,10 @@
 defineOptions({ name: 'Layout' })
 import { AppMain, Navbar } from './components'
 
+/** Layout 布局响应式 */
+useResize()
+
+/** 读取 Pinia 仓库 */
 const settingStore = useSettingStore()
 </script>
 

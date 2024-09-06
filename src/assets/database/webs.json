@@ -54,7 +54,13 @@
         "title": "端对端传文件",
         "link": "https://wormhole.app",
         "icon": "http://navigation.devops.horizon-china.cn/img/wormhole.png",
-        "desc": "让你能以端到端加密和自动过期链接的方式分享文件，可以确保你分享的文件私密且不会一直留在互联网上。"
+        "desc": "让你能以端到端加密和自动过期链接的方式分享文件，可以确保你分享的文件私密且不会一直留在互联网上"
+      },
+      {
+        "title": "JSON 格式化",
+        "link": "https://it.suchtool.com",
+        "icon": "https://static.suchtool.com/img/icon/it.ico",
+        "desc": "工具精灵，强大的在线工具网站，包含：办公神器、程序员工具、格式转换工具、图片处理等"
       }
     ]
   },

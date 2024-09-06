@@ -1,15 +1,19 @@
 <template>
-  <div class="navbar flex-center">
-    <el-text type="success">{{ time }}</el-text>
-    <el-text type="primary">甲辰龙年</el-text>
-    <el-text type="danger">{{ week }}</el-text>
+  <div class="navbar flex items-center relative">
+    <AppLogo />
+
+    <div class="time">
+      <el-text type="success">{{ time }}</el-text>
+      <el-text type="primary">甲辰龙年</el-text>
+      <el-text type="danger">{{ week }}</el-text>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import dayjs from 'dayjs'
-
 defineOptions({ name: 'Navbar' })
+import dayjs from 'dayjs'
+import { AppLogo } from '@/layout/components'
 
 const time = ref<string>()
 const week = ref<string>()
@@ -25,6 +29,15 @@ updateTime()
 
 <style lang="scss" scoped>
 .el-text + .el-text {
-  margin-left: 16px;
+  margin-left: 8px;
+}
+
+.time {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  text-align: center;
 }
 </style>

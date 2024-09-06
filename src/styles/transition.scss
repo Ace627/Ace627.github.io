@@ -16,3 +16,12 @@
   opacity: 0;
   transform: translateX(30px);
 }
+
+/* sidebar-logo-fade */
+.sidebar-logo-fade-enter-active {
+  transition: opacity 1.5s;
+}
+.sidebar-logo-fade-enter-from,
+.sidebar-logo-fade-leave-to {
+  opacity: 0;
+}
