@@ -86,19 +86,15 @@ const classes = computed(() => [
 }
 
 .layout-top .fixed-header + .app-main {
+  height: 100vh;
   padding-top: var(--ap-header-height);
+  overflow: auto;
 }
 
 /* 移动端模式 && 侧栏折叠 */
 .layout-top.hide-sidebar.mobile .sidebar-container {
   width: 0;
   pointer-events: none;
-}
-
-/* 防止移动端侧栏遮罩层出来后 依旧可以滚动页面的问题 */
-.layout-top.mobile.open-sidebar {
-  position: fixed;
-  top: 0;
 }
 
 /* 移除侧栏和主容器的过渡效果 */
