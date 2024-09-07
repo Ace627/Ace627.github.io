@@ -3,13 +3,16 @@
     <!-- 侧栏折叠控制 -->
     <Hamburger class="navbar-item" v-if="appStore.isMobile" @toggleClick="appStore.toggleSidebar" />
 
+    <!-- 系统 Logo -->
     <AppLogo />
 
-    <div class="time">
+    <!-- <div class="time">
       <el-text type="success">{{ time }}</el-text>
       <el-text type="primary">甲辰龙年</el-text>
       <el-text type="danger">{{ week }}</el-text>
-    </div>
+    </div> -->
+
+    <Sidebar class="ml-auto flex-1 flex justify-end" v-if="appStore.isDesktop" mode="horizontal" />
   </div>
 </template>
 
@@ -17,7 +20,7 @@
 defineOptions({ name: 'Navbar' })
 import dayjs from 'dayjs'
 import Hamburger from './Hamburger.vue'
-import { AppLogo } from '@/layout/components'
+import { AppLogo, Sidebar } from '@/layout/components'
 
 const appStore = useAppStore()
 const time = ref<string>()
@@ -34,6 +37,11 @@ updateTime()
 
 <style lang="scss" scoped>
 .navbar {
+  --el-menu-horizontal-height: var(--ap-navbar-height);
+  --el-menu-item-height: var(--ap-navbar-height);
+  --el-menu-text-color: var(--el-text-color-regular);
+  // --el-menu-bg-color: transparent;
+  // --el-menu-active-color: var(--ap-sidebar-active-color);
   height: var(--ap-navbar-height);
   background-color: rgba($color: #fff, $alpha: 0.6);
   backdrop-filter: blur(4px);

@@ -22,7 +22,6 @@ import { AppMain, Navbar, Sidebar } from './components'
 /** 读取 Pinia 仓库 */
 const appStore = useAppStore()
 const settingStore = useSettingStore()
-console.log('appStore: ', appStore)
 
 /** 用来添加到根组件的动态类的集合 */
 const classes = computed(() => [
@@ -35,6 +34,10 @@ const classes = computed(() => [
 
 <style lang="scss" scoped>
 .layout-top {
+  --el-menu-bg-color: transparent;
+  --el-menu-text-color: var(--ap-sidebar-text-color);
+  --el-menu-active-color: var(--ap-sidebar-active-color);
+  --el-menu-item-height: var(--ap-sidebar-item-height);
   position: relative;
   width: 100%;
   height: 100%;
@@ -58,10 +61,10 @@ const classes = computed(() => [
   left: 0;
   top: 0;
   z-index: 1001;
-  width: var(--ap-sidebar-width);
+  width: var(--ap-width-sidebar);
   height: 100%;
-  color: var(--ap-text-color-sidebar);
-  background-color: var(--ap-bg-color-sidebar, #262935);
+  color: var(--ap-sidebar-text-color);
+  background-color: var(--ap-sidebar-bg-color);
   transition: width var(--el-transition-duration);
   backdrop-filter: blur(8px);
   box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);

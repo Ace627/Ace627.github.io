@@ -1,4 +1,6 @@
 interface VueRouteMeta {
+  /** 菜单的图标 */
+  icon: string
   /** 默认 false，设置 true 的时候该路由不会在侧边栏出现 */
   hidden: boolean
 

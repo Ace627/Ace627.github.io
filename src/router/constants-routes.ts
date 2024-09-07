@@ -25,11 +25,26 @@ export const constantRoutes: RouteRecordRaw[] = [
   },
 
   // {
-  //   path: '/redirect',
+  //   path: '/External',
+  //   name: 'External',
   //   component: Layout,
-  //   meta: { title: '路由重定向', hidden: true },
-  //   children: [{ path: '/redirect/:path(.*)', component: () => import('@/views/Redirect/index.vue') }],
+  //   meta: { title: '外链', alwaysShow: true },
+  //   children: [
+  //     {
+  //       path: 'https://code.visualstudio.com/#alt-downloads',
+  //       name: 'Visual Studio Code',
+  //       component: () => {},
+  //       meta: { title: 'Visual Studio Code' },
+  //     },
+  //   ],
   // },
+
+  {
+    path: '/redirect',
+    component: Layout,
+    meta: { title: '路由重定向', hidden: true },
+    children: [{ path: '/redirect/:path(.*)', component: () => import('@/views/Redirect/index.vue') }],
+  },
 
   // The not found page must be placed last
   {

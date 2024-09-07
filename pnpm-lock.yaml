@@ -26,6 +26,9 @@ importers:
       nprogress:
         specifier: ^0.2.0
         version: 0.2.0
+      path-browserify:
+        specifier: 1.0.1
+        version: 1.0.1
       pinia:
         specifier: ^2.2.2
         version: 2.2.2(typescript@5.5.4)(vue@3.5.0(typescript@5.5.4))
@@ -48,6 +51,9 @@ importers:
       '@types/nprogress':
         specifier: ^0.2.3
         version: 0.2.3
+      '@types/path-browserify':
+        specifier: 1.0.3
+        version: 1.0.3
       '@unocss/transformer-directives':
         specifier: 0.62.3
         version: 0.62.3
@@ -757,6 +763,9 @@ packages:
 
   '@types/nprogress@0.2.3':
     resolution: {integrity: sha512-k7kRA033QNtC+gLc4VPlfnue58CM1iQLgn1IMAU8VPHGOj7oIHPp9UlhedEnD/Gl8evoCjwkZjlBORtZ3JByUA==}
+
+  '@types/path-browserify@1.0.3':
+    resolution: {integrity: sha512-ZmHivEbNCBtAfcrFeBCiTjdIc2dey0l7oCGNGpSuRTy8jP6UVND7oUowlvDujBy8r2Hoa8bfFUOCiPWfmtkfxw==}
 
   '@types/responselike@1.0.3':
     resolution: {integrity: sha512-H/+L+UkTV33uf49PH5pCAUBVPNj2nDBXTN+qS1dOwyyg24l3CcicicCA7ca+HMvJBZcFgl5r8e+RR6elsb4Lyw==}
@@ -3560,6 +3569,8 @@ snapshots:
       undici-types: 6.19.6
 
   '@types/nprogress@0.2.3': {}
+
+  '@types/path-browserify@1.0.3': {}
 
   '@types/responselike@1.0.3':
     dependencies:
