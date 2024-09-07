@@ -40,8 +40,9 @@ updateTime()
   --el-menu-horizontal-height: var(--ap-navbar-height);
   --el-menu-item-height: var(--ap-navbar-height);
   --el-menu-text-color: var(--el-text-color-regular);
-  // --el-menu-bg-color: transparent;
-  // --el-menu-active-color: var(--ap-sidebar-active-color);
+  --el-menu-base-level-padding: 8px;
+  --el-menu-hover-text-color: var(--ap-sidebar-active-color);
+  --el-menu-hover-bg-color: none;
   height: var(--ap-navbar-height);
   background-color: rgba($color: #fff, $alpha: 0.6);
   backdrop-filter: blur(4px);

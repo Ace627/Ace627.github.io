@@ -170,6 +170,12 @@
         "desc": "下一代前端工具链"
       },
       {
+        "title": "Pnpm 中文网",
+        "link": "https://www.pnpm.cn",
+        "icon": "https://www.pnpm.cn/img/favicon.png",
+        "desc": "一款速度快、节省磁盘空间的软件包管理器"
+      },
+      {
         "title": "autofit.js",
         "link": "https://larryzhu-dev.github.io/autoLarryPages/autofit.js",
         "icon": "https://larryzhu-dev.github.io/autoLarryPages/autofit.js/assets/autofit.CjIljoZR.png",
