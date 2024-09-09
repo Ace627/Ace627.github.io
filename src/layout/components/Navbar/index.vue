@@ -44,7 +44,7 @@ updateTime()
   --el-menu-hover-text-color: var(--ap-sidebar-active-color);
   --el-menu-hover-bg-color: none;
   height: var(--ap-navbar-height);
-  background-color: rgba($color: #fff, $alpha: 0.6);
+  background-color: rgba($color: #fff, $alpha: 0.4);
   backdrop-filter: blur(4px);
   box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
 }

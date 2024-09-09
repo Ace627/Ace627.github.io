@@ -1,13 +1,15 @@
 @use './variables.css'; // 全局 CSS 变量
-@use 'nprogress/nprogress.css';
 @use './transition.scss';
 @use './custom-element-plus/index.scss';
+@import 'nprogress/nprogress.css';
 @import '//at.alicdn.com/t/c/font_4611674_9ipdnin4rro.css';
 
 body {
   color: var(--el-text-color-regular);
-  background-color: var(--el-bg-color-page);
   font-family: var(--el-font-family);
+  background-color: var(--el-bg-color-page);
+  background-image: url('@/assets/images/bg-image-02.png');
+  background-repeat: repeat, repeat-x;
 }
 
 /* 顶部加载进度条的颜色 */

@@ -9,6 +9,12 @@
         "desc": "国内开发者常用的代码托管平台"
       },
       {
+        "title": "Github",
+        "link": "https://github.com",
+        "icon": "https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg",
+        "desc": "全球开发者常用的代码托管平台"
+      },
+      {
         "title": "零点协作系统",
         "link": "http://172.16.0.196/loginController.do?login",
         "icon": "https://www.idataway.com/favicon.ico",
