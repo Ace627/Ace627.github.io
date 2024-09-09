@@ -4,7 +4,7 @@
     <template v-if="!alwaysShowRootMenu && theOnlyOneChild && !theOnlyOneChild.children">
       <SidebarItemLink v-if="theOnlyOneChild.meta" :to="resolvePath(theOnlyOneChild.path)">
         <el-menu-item :index="resolvePath(theOnlyOneChild.path)">
-          <IconFont class="el-icon" v-if="theOnlyOneChild.meta && theOnlyOneChild.meta.icon" :name="theOnlyOneChild.meta.icon" />
+          <IconFont v-if="theOnlyOneChild.meta && theOnlyOneChild.meta.icon" :name="theOnlyOneChild.meta.icon" />
           <template v-if="theOnlyOneChild.meta.title" #title>
             <span class="title">{{ theOnlyOneChild.meta.title }}</span>
           </template>
@@ -15,7 +15,7 @@
     <!-- 需要作为折叠菜单展示的情况 -->
     <el-sub-menu v-else :index="resolvePath(item.path)">
       <template #title>
-        <IconFont class="el-icon" v-if="item.meta && item.meta.icon" :name="item.meta.icon" />
+        <IconFont v-if="item.meta && item.meta.icon" :name="item.meta.icon" />
         <span v-if="item.meta?.title" class="title">{{ item.meta.title }}</span>
       </template>
       <template v-if="item.children">
@@ -60,8 +60,4 @@ function resolvePath(routePath: string) {
 }
 </script>
 
-<style lang="scss" scoped>
-.open-sidebar .el-icon.iconfont {
-  margin-right: 4px;
-}
-</style>
+<style lang="scss" scoped></style>

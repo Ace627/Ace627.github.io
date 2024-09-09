@@ -1,7 +1,8 @@
 @use './variables.css'; // 全局 CSS 变量
 @use 'nprogress/nprogress.css';
 @use './transition.scss';
-@import '//at.alicdn.com/t/c/font_4611674_z6o1ahdyy2q.css';
+@use './custom-element-plus/index.scss';
+@import '//at.alicdn.com/t/c/font_4611674_9ipdnin4rro.css';
 
 body {
   color: var(--el-text-color-regular);

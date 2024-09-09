@@ -8,7 +8,6 @@
 
 <script setup lang="ts">
 defineOptions({ name: 'Sidebar' })
-import { AppLogo } from '..'
 import SidebarItem from './SidebarItem.vue'
 
 const props = defineProps({
@@ -36,5 +35,14 @@ const routeList = computed(() => router.options.routes)
   border: none;
   width: 100%;
   min-height: 100%;
+}
+
+:deep(.el-menu--vertical .el-menu-item.is-active) {
+  background-color: var(--el-color-primary-light-9);
+}
+
+:deep(.el-menu--horizontal > .el-sub-menu .el-sub-menu__title) {
+  border: none;
+  padding-right: calc(var(--el-menu-icon-width));
 }
 </style>

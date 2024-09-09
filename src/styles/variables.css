@@ -7,6 +7,7 @@
   --ap-sidebar-active-color: var(--el-color-primary);
   --ap-sidebar-text-color: var(--el-color-info-light-9);
   --ap-sidebar-item-height: 42px;
+  --ap-menu-preifix-icon-gap: 6px;
 
   /* Navbar */
   --ap-navbar-height: 50px;

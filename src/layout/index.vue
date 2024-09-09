@@ -34,10 +34,6 @@ const classes = computed(() => [
 
 <style lang="scss" scoped>
 .layout-top {
-  --el-menu-bg-color: transparent;
-  --el-menu-text-color: var(--ap-sidebar-text-color);
-  --el-menu-active-color: var(--ap-sidebar-active-color);
-  --el-menu-item-height: var(--ap-sidebar-item-height);
   position: relative;
   width: 100%;
   height: 100%;

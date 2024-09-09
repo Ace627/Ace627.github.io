@@ -1,6 +1,9 @@
 import Layout from '@/layout/index.vue'
 import type { RouteRecordRaw } from 'vue-router'
 
+const modules: Record<string, { default: RouteRecordRaw }> = import.meta.glob('./modules/*.ts', { eager: true })
+const patchRoutes = Object.keys(modules).map((key) => modules[key].default)
+
 /** 常驻路由 除了 redirect/403/404/login 等隐藏页面，其它页面建议设置 Name 属性 */
 export const constantRoutes: RouteRecordRaw[] = [
   {
@@ -24,20 +27,7 @@ export const constantRoutes: RouteRecordRaw[] = [
     ],
   },
 
-  // {
-  //   path: '/External',
-  //   name: 'External',
-  //   component: Layout,
-  //   meta: { title: '外链', alwaysShow: true },
-  //   children: [
-  //     {
-  //       path: 'https://code.visualstudio.com/#alt-downloads',
-  //       name: 'Visual Studio Code',
-  //       component: () => {},
-  //       meta: { title: 'Visual Studio Code' },
-  //     },
-  //   ],
-  // },
+  ...patchRoutes,
 
   {
     path: '/redirect',

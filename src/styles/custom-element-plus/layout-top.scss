@@ -1,0 +1,24 @@
+.layout-top {
+  --el-menu-bg-color: transparent;
+  --el-menu-hover-bg-color: transparent;
+  --el-menu-text-color: var(--ap-sidebar-text-color);
+  --el-menu-active-color: var(--ap-sidebar-active-color);
+  --el-menu-item-height: var(--ap-sidebar-item-height);
+  --el-menu-sub-item-height: var(--el-menu-item-height);
+  /* 折叠与非折叠菜单左侧图标与右侧菜单文本的距离 */
+  .el-menu-item .title,
+  .el-sub-menu__title .title {
+    margin-left: var(--ap-menu-preifix-icon-gap);
+  }
+}
+
+/* 顶部水平折叠菜单弹出的二级菜单的样式 */
+.el-menu--horizontal.custom-menu-popper {
+  --el-menu-horizontal-sub-item-height: 30px;
+
+  /* 折叠与非折叠菜单左侧图标与右侧菜单文本的距离 */
+  .el-menu-item .title,
+  .el-sub-menu__title .title {
+    margin-left: var(--ap-menu-preifix-icon-gap);
+  }
+}
