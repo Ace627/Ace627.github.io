@@ -67,6 +67,12 @@
         "link": "https://it.suchtool.com",
         "icon": "https://static.suchtool.com/img/icon/it.ico",
         "desc": "工具精灵，强大的在线工具网站，包含：办公神器、程序员工具、格式转换工具、图片处理等"
+      },
+      {
+        "title": "稀土掘金",
+        "link": "https://juejin.cn/frontend",
+        "icon": "https://lf-web-assets.juejin.cn/obj/juejin-web/xitu_juejin_web/static/favicons/apple-touch-icon.png",
+        "desc": "掘金是面向全球中文开发者的技术内容分享与交流平台。我们通过技术文章、沸点、课程、直播等产品和服务，打造一个激发开发者创作灵感，激励开发者沉淀分享，陪伴开发者成长的综合类技术社区"
       }
     ]
   },

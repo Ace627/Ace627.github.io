@@ -1,51 +1,22 @@
 import type { RouteRecordRaw } from 'vue-router'
 
+function generateRouteRecord(path: string, title: string, icon = 'VSCode'): RouteRecordRaw {
+  return { path, name: path, component: () => {}, meta: { title, icon } }
+}
+
 export default {
   path: '/WindowApp',
   name: 'WindowsApp',
   meta: { title: '电脑软件', icon: 'VSCode' },
   children: [
-    {
-      path: 'https://pc.weixin.qq.com',
-      name: '微信 PC 版',
-      component: () => {},
-      meta: { title: '微信 PC 版', icon: 'WeChat' },
-    },
-    {
-      path: 'https://code.visualstudio.com/#alt-downloads',
-      name: 'VSCode',
-      component: () => {},
-      meta: { title: 'VSCode', icon: 'VSCode' },
-    },
-    {
-      path: 'https://www.dcloud.io/hbuilderx.html',
-      name: 'HBuilderX',
-      component: () => {},
-      meta: { title: 'HBuilderX', icon: 'VSCode' },
-    },
-    {
-      path: 'https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html',
-      name: '微信开发者工具',
-      component: () => {},
-      meta: { title: '微信开发者工具', icon: 'VSCode' },
-    },
-    {
-      path: 'https://www.centbrowser.cn',
-      name: '百分浏览器',
-      component: () => {},
-      meta: { title: '百分浏览器', icon: 'Browser' },
-    },
-    {
-      path: 'https://www.google.cn/chrome',
-      name: '谷歌浏览器',
-      component: () => {},
-      meta: { title: '谷歌浏览器', icon: 'Browser' },
-    },
-    {
-      path: 'https://www.google.cn/chrome/?standalone=1&platform=win64',
-      name: '谷歌浏览器64位',
-      component: () => {},
-      meta: { title: '谷歌浏览器64位', icon: 'Browser' },
-    },
+    generateRouteRecord('https://pc.weixin.qq.com', '微信 PC 版', 'WeChat'),
+    generateRouteRecord('https://meeting.tencent.com/download', '腾讯会议', 'WeChat'),
+    generateRouteRecord('https://git-scm.com/downloads', 'Git'),
+    generateRouteRecord('https://code.visualstudio.com/#alt-downloads', 'VSCode'),
+    generateRouteRecord('https://www.dcloud.io/hbuilderx.html', 'HBuilderX'),
+    generateRouteRecord('https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html', '微信开发者工具'),
+    generateRouteRecord('https://www.centbrowser.cn', '百分浏览器', 'Browser'),
+    generateRouteRecord('https://www.google.cn/chrome', '谷歌浏览器', 'Browser'),
+    generateRouteRecord('https://www.google.cn/chrome/?standalone=1&platform=win64', '谷歌浏览器64位', 'Browser'),
   ],
 } as RouteRecordRaw
