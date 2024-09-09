@@ -1,5 +1,5 @@
 <template>
-  <aside class="sidebar-container">
+  <aside>
     <el-menu class="custom-menu" popper-class="custom-menu-popper" :defaultActive :collapse unique-opened :mode v-bind="$attrs" :collapse-transition="false">
       <SidebarItem v-for="(route, index) in routeList" :key="index" :item="route" :basePath="route.path" />
     </el-menu>

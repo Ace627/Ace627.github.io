@@ -5,10 +5,72 @@
   --el-menu-active-color: var(--ap-sidebar-active-color);
   --el-menu-item-height: var(--ap-sidebar-item-height);
   --el-menu-sub-item-height: var(--el-menu-item-height);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* 左侧边栏抽屉背景遮罩 */
+  .drawer-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: var(--el-overlay-color-lighter);
+    overflow: hidden;
+  }
+  /* 侧边栏默认样式 */
+  .sidebar-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1001;
+    width: var(--ap-width-sidebar);
+    height: 100%;
+    color: var(--ap-sidebar-text-color);
+    background-color: var(--ap-sidebar-bg-color);
+    transition: width var(--el-transition-duration);
+    backdrop-filter: blur(8px);
+    box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+    overflow: hidden;
+  }
+  /* 内容区固定头部的基础样式 */
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9;
+    width: 100%;
+    transition: width var(--el-transition-duration);
+  }
+  /* 主体内容区基础样式 */
+  .app-main {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  .fixed-header + .app-main {
+    height: 100vh;
+    padding-top: var(--ap-header-height);
+    overflow: auto;
+  }
+
   /* 折叠与非折叠菜单左侧图标与右侧菜单文本的距离 */
   .el-menu-item .title,
   .el-sub-menu__title .title {
     margin-left: var(--ap-menu-preifix-icon-gap);
+  }
+
+  /* 移动端模式 && 侧栏折叠 */
+  &.hide-sidebar.mobile .sidebar-container {
+    width: 0;
+    pointer-events: none;
+  }
+
+  /* 移除侧栏和主容器的过渡效果 */
+  &.withoutAnimation .sidebar-container,
+  &.withoutAnimation .main-container {
+    transition: none;
   }
 }
 
