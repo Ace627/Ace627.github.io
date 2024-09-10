@@ -3,14 +3,20 @@
     <el-form ref="loginFormRef" :model="loginForm" :rules="loginRules">
       <h3 class="title">若依后台管理系统</h3>
       <el-form-item prop="username">
-        <el-input v-model="loginForm.username" placeholder="账号" :prefix-icon="User"> </el-input>
+        <el-input v-model="loginForm.username" placeholder="账号">
+          <template #prefix> <IconFont name="User" /> </template>
+        </el-input>
       </el-form-item>
       <el-form-item prop="password">
-        <el-input type="password" v-model="loginForm.password" show-password placeholder="密码" :prefix-icon="User"></el-input>
+        <el-input type="password" v-model="loginForm.password" show-password placeholder="密码">
+          <template #prefix> <IconFont name="Lock" /> </template>
+        </el-input>
       </el-form-item>
       <el-form-item prop="code" v-if="captchaEnabled">
         <div class="flex items-center w-full">
-          <el-input v-model="loginForm.captcha" placeholder="请输入验证码" :prefix-icon="Lock"> </el-input>
+          <el-input v-model="loginForm.captcha" placeholder="请输入验证码">
+            <template #prefix> <IconFont name="Guard" /> </template>
+          </el-input>
           <img :src="captchaURL ?? defaultCaptcha" alt="captcha" class="cursor-pointer ml-10px" draggable="false" />
         </div>
       </el-form-item>
@@ -37,6 +43,7 @@ import { User, Lock } from '@element-plus/icons-vue'
 import Cookies from 'js-cookie'
 import defaultCaptcha from '@/assets/images/no-captcha.png'
 
+const userStore = useUserStore()
 /** 登录表单实例 */
 const loginFormRef = useTemplateRef<FormInstance>('loginFormRef')
 /** 登录按钮 Loading */
@@ -59,7 +66,7 @@ async function handleLogin() {
   try {
     loading.value = true
     await loginFormRef.value?.validate()
-    // 处理具体的登录逻辑
+    await userStore.login(loginForm.value) // 处理具体的登录逻辑
     handleRememberMe() // 登录成功之后再触发
     loading.value = false
   } catch (error) {
