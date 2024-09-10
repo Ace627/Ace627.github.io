@@ -11,7 +11,13 @@ export default {
       path: 'LoginTemplate01',
       name: 'LoginTemplate01',
       component: () => import('@/views/PageTemplate/LoginTemplate01/index.vue'),
-      meta: { title: '登录模板01', icon: 'Taichi' },
+      meta: { title: '登录模板01', icon: 'TaiChi' },
+    },
+    {
+      path: 'LoginTemplate02',
+      name: 'LoginTemplate02',
+      component: () => import('@/views/PageTemplate/LoginTemplate02/index.vue'),
+      meta: { title: '登录模板02', icon: 'TaiChi' },
     },
   ],
 } as RouteRecordRaw

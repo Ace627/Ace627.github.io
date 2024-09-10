@@ -1,7 +1,13 @@
 <template>
-  <div class="login-container flex-center">
-    <el-form ref="loginFormRef" :model="loginForm" :rules="loginRules">
-      <h3 class="title">若依后台管理系统</h3>
+  <div class="login-container relative wh-full c-white bg-cover">
+    <div class="absolute pos-left-25px pos-top-20px font-bold text-size-25px">{{ VITE_APP_TITLE }}</div>
+    <div class="login-desc">
+      <p>体验数据一触即达</p>
+      <p>决策云图一览无余</p>
+    </div>
+
+    <el-form class="login-form">
+      <h3 class="login-title"><span>WELCOME</span>欢迎登录</h3>
       <el-form-item prop="username">
         <el-input v-model="loginForm.username" placeholder="账号">
           <template #prefix> <IconFont name="User" /> </template>
@@ -20,28 +26,23 @@
           <img :src="captchaURL ?? defaultCaptcha" alt="captcha" class="cursor-pointer ml-10px" draggable="false" />
         </div>
       </el-form-item>
-      <el-checkbox v-model="loginForm.rememberMe" style="margin: 0px 0px 25px 0px">记住密码</el-checkbox>
       <el-form-item>
         <el-button :loading type="primary" class="w-full" size="large" @click.prevent="handleLogin">
           <span>{{ loading ? `登录中...` : `登录` }}</span>
         </el-button>
       </el-form-item>
     </el-form>
-
-    <!--  底部  -->
-    <div class="login-footer text-center">
-      <span>Copyright © 2018-2024 ruoyi.vip All Rights Reserved.</span>
-    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-defineOptions({ name: 'LoginTemplate01' })
+defineOptions({ name: 'LoginTemplate02' })
+import Cookies from 'js-cookie'
 import { useTemplateRef } from 'vue'
 import type { FormInstance, FormRules } from 'element-plus'
-import Cookies from 'js-cookie'
 import defaultCaptcha from '@/assets/images/no-captcha.png'
 
+const { VITE_APP_TITLE } = useEnv()
 const userStore = useUserStore()
 /** 登录表单实例 */
 const loginFormRef = useTemplateRef<FormInstance>('loginFormRef')
@@ -100,35 +101,62 @@ getCookie()
 
 <style lang="scss" scoped>
 .login-container {
-  position: relative;
-  height: 100%;
-  background-image: url('@/assets/images/bg-image-03.jpg');
-  background-size: cover;
-  .el-form {
-    width: 400px;
-    padding: 25px 25px 5px 25px;
-    border-radius: 6px;
-    background-color: #fff;
-    .title {
-      margin: 0px auto 30px auto;
-      text-align: center;
-      color: #707070;
-      font-size: 20px;
-      font-weight: 500;
-    }
-    .el-input {
-      --el-input-height: 38px;
-    }
-  }
-  .login-footer {
+  background-image: url('@/assets/images/bg-image-04.png');
+  .login-desc {
     position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 40px;
-    line-height: 40px;
-    color: var(--el-color-white);
-    font-size: var(--el-font-size-extra-small);
-    letter-spacing: 1px;
+    left: 40px;
+    bottom: 40px;
+    font-size: 24px;
+    color: #b8c3d9;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    p ~ p {
+      margin-top: 1em;
+    }
   }
+  .login-form {
+    float: right;
+    width: 408px;
+    min-width: 260px;
+    margin-top: 300px;
+    margin-right: 200px;
+    padding: 20px 30px;
+    background-color: rgba(245, 246, 247, 0.75);
+    box-shadow: -2px -2px 4px rgba(255, 255, 255, 0.9), 0px 5px 20px 5px rgba(15, 21, 51, 0.1), inset -1px 1px 1px rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(136px);
+    border-radius: 10px;
+    .login-title {
+      font-size: 18px;
+      color: #000000;
+      margin-bottom: 20px;
+      span {
+        color: #2b65d9;
+        margin-right: 10px;
+      }
+    }
+    .el-button {
+      width: 100%;
+      height: 42px;
+      margin-top: 16px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      color: #2b65d9;
+      letter-spacing: 2px;
+      background-color: #f5f6f7;
+      box-shadow: -2px -2px 4px rgba(255, 255, 255, 0.9), 0px 1px 2px rgba(15, 21, 51, 0.1), inset -1px 1px 1px rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+.el-input {
+  --el-input-height: 40px;
+}
+:deep(.el-input__wrapper) {
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: inset 0px 1px 3px rgba(15, 21, 51, 0.1);
 }
 </style>

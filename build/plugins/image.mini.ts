@@ -16,7 +16,7 @@ export const registerImageMini = () => {
       interlaced: false,
     },
     mozjpeg: {
-      quality: 20, // 压缩质量
+      quality: 80, // 压缩质量
     },
 
     svgo: {
