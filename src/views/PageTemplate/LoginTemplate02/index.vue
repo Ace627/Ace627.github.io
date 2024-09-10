@@ -6,7 +6,7 @@
       <p>决策云图一览无余</p>
     </div>
 
-    <el-form class="login-form">
+    <el-form class="login-form" :model="loginForm" :rules="loginRules" ref="loginFormRef">
       <h3 class="login-title"><span>WELCOME</span>欢迎登录</h3>
       <el-form-item prop="username">
         <el-input v-model="loginForm.username" placeholder="账号">
@@ -58,7 +58,7 @@ const loginForm = ref<LoginEntity.LoginForm>({} as LoginEntity.LoginForm)
 const loginRules: FormRules = {
   username: [{ required: true, trigger: 'blur', message: '请输入您的账号' }],
   password: [{ required: true, trigger: 'blur', message: '请输入您的密码' }],
-  code: [{ required: true, trigger: 'change', message: '请输入验证码' }],
+  captcha: [{ required: true, trigger: 'change', message: '请输入验证码' }],
 }
 
 /** 处理登录按钮的回调 */
@@ -130,7 +130,7 @@ getCookie()
       color: #000000;
       margin-bottom: 20px;
       span {
-        color: #2b65d9;
+        color: var(--el-color-primary);
         margin-right: 10px;
       }
     }
@@ -141,10 +141,13 @@ getCookie()
       font-size: 16px;
       border: none;
       border-radius: 10px;
-      color: #2b65d9;
+      color: var(--el-color-primary);
       letter-spacing: 2px;
       background-color: #f5f6f7;
       box-shadow: -2px -2px 4px rgba(255, 255, 255, 0.9), 0px 1px 2px rgba(15, 21, 51, 0.1), inset -1px 1px 1px rgba(255, 255, 255, 0.8);
+      &:hover {
+        box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.9), 0px 1px 2px rgba(15, 21, 51, 0.1), -1px 1px 1px rgba(255, 255, 255, 0.8);
+      }
     }
   }
 }

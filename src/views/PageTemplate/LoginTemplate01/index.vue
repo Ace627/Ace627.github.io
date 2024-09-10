@@ -57,7 +57,7 @@ const loginForm = ref<LoginEntity.LoginForm>({} as LoginEntity.LoginForm)
 const loginRules: FormRules = {
   username: [{ required: true, trigger: 'blur', message: '请输入您的账号' }],
   password: [{ required: true, trigger: 'blur', message: '请输入您的密码' }],
-  code: [{ required: true, trigger: 'change', message: '请输入验证码' }],
+  captcha: [{ required: true, trigger: 'change', message: '请输入验证码' }],
 }
 
 /** 处理登录按钮的回调 */
