@@ -1,3 +1,11 @@
+/* 折叠与非折叠菜单左侧图标与右侧菜单文本的距离 */
+@mixin set-menu-title-left-gap($gap) {
+  .el-menu-item .title,
+  .el-sub-menu__title .title {
+    margin-left: $gap;
+  }
+}
+
 .layout-top {
   --el-menu-bg-color: transparent;
   --el-menu-hover-bg-color: transparent;
@@ -55,10 +63,9 @@
     overflow: auto;
   }
 
-  /* 折叠与非折叠菜单左侧图标与右侧菜单文本的距离 */
-  .el-menu-item .title,
-  .el-sub-menu__title .title {
-    margin-left: var(--ap-menu-preifix-icon-gap);
+  .custom-menu.el-menu {
+    /* 折叠与非折叠菜单左侧图标与右侧菜单文本的距离 */
+    @include set-menu-title-left-gap(var(--ap-menu-preifix-icon-gap));
   }
 
   /* 移动端模式 && 侧栏折叠 */
@@ -75,12 +82,10 @@
 }
 
 /* 顶部水平折叠菜单弹出的二级菜单的样式 */
-.el-menu--horizontal.custom-menu-popper {
+.custom-menu-popper {
+  // --el-menu-horizontal-sub-item-height: calc(var(--ap-sidebar-item-height) / 2);
   --el-menu-horizontal-sub-item-height: 30px;
 
   /* 折叠与非折叠菜单左侧图标与右侧菜单文本的距离 */
-  .el-menu-item .title,
-  .el-sub-menu__title .title {
-    margin-left: var(--ap-menu-preifix-icon-gap);
-  }
+  @include set-menu-title-left-gap(var(--ap-menu-preifix-icon-gap));
 }

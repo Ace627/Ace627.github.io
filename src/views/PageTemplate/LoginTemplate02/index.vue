@@ -1,9 +1,9 @@
 <template>
   <div class="login-container relative wh-full c-white bg-cover">
     <div class="absolute pos-left-25px pos-top-20px font-bold text-size-25px">{{ VITE_APP_TITLE }}</div>
-    <div class="login-desc">
-      <p>体验数据一触即达</p>
-      <p>决策云图一览无余</p>
+    <div class="login-desc tracking-widest">
+      <p>体验数据 一触即达</p>
+      <p>决策云图 一览无余</p>
     </div>
 
     <el-form class="login-form" :model="loginForm" :rules="loginRules" ref="loginFormRef">
