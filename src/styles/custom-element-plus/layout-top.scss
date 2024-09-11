@@ -60,7 +60,7 @@
   .fixed-header + .app-main {
     height: 100vh;
     padding-top: var(--ap-header-height);
-    overflow: auto;
+    overflow-y: auto;
   }
 
   .custom-menu.el-menu {
