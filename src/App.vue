@@ -1,4 +1,6 @@
 <template>
+  <!-- Config Provider 全局配置 -->
+  <!-- https://element-plus.org/zh-CN/component/config-provider.html -->
   <ElConfigProvider :locale="zhCn">
     <RouterView />
   </ElConfigProvider>
