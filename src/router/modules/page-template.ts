@@ -19,5 +19,11 @@ export default {
       component: () => import('@/views/PageTemplate/LoginTemplate02/index.vue'),
       meta: { title: '登录模板02', icon: 'Coupon' },
     },
+    {
+      path: 'LoginTemplate03',
+      name: 'LoginTemplate03',
+      component: () => import('@/views/PageTemplate/LoginTemplate03/index.vue'),
+      meta: { title: '登录模板03', icon: 'Coupon' },
+    },
   ],
 } as RouteRecordRaw

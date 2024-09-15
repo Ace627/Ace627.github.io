@@ -25,7 +25,6 @@ const router = useRouter()
 const collapse = computed(() => !appStore.sidebar.opened)
 /** 计算当前激活路径 */
 const defaultActive: ComputedRef<string> = computed(() => route.meta.activeMenu ?? route.path)
-console.log('defaultActive: ', defaultActive.value)
 /** 计算当前路由表 */
 // const routeList = computed(() => permissionStore.routes)
 const routeList = computed(() => router.options.routes)
