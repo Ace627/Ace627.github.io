@@ -13,6 +13,10 @@
     </div> -->
 
     <Sidebar class="ml-auto flex-1 flex justify-end" v-if="appStore.isDesktop" mode="horizontal" />
+
+    <div class="right-nav h-full ml-auto flex-center">
+      <UserDropDown class="navbar-item" />
+    </div>
   </div>
 </template>
 
@@ -20,6 +24,7 @@
 defineOptions({ name: 'Navbar' })
 import dayjs from 'dayjs'
 import Hamburger from './Hamburger.vue'
+import UserDropDown from './UserDropDown.vue'
 import { AppLogo, Sidebar } from '@/layout/components'
 
 const appStore = useAppStore()

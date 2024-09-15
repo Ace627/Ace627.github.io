@@ -16,9 +16,17 @@ export default defineStore('user', () => {
   }
 
   /** 退出登录 */
-  async function logout() {
-    await LoginService.logout()
-    token.value = ''
+  async function logout(config = { confirm: true }) {
+    try {
+      if (config.confirm) await useModal().confirm(`确定注销并退出系统吗？`)
+      await LoginService.logout()
+      token.value = ''
+      removeAccessToken()
+      window.location.reload()
+    } catch (error) {
+      console.log('退出登录失败: ', error)
+    }
+
     removeAccessToken()
   }
 

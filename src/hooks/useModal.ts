@@ -63,7 +63,7 @@ function notifyWarning(message: string, config: Partial<NotificationOptions> = {
 
 /** 确认窗体 */
 function confirm(content: string, config: ElMessageBoxOptions = {}) {
-  return ElMessageBox.confirm(content, '系统提示', { confirmButtonText: '确定', cancelButtonText: '取消', type: 'warning', ...config })
+  return ElMessageBox.confirm(content, '系统提示', { confirmButtonText: '确定', cancelButtonText: '取消', type: 'warning', showClose: false, ...config })
 }
 
 /** 提交内容 */
