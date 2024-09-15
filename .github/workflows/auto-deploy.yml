@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   deploy:
-    name: 自动部署为 GitPage 静态网站
+  name: 自动部署为 GitPage 静态网站
     # 定义工作运行的环境，这里使用的是最新的 Ubuntu 操作系统
     runs-on: ubuntu-latest
 
@@ -34,8 +34,7 @@ jobs:
       - name: 2、设置 Node.js 环境
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # 使用的 Node.js 版本
-          cache: 'pnpm'
+          node-version: 20 # 使用的 Node.js 版本
 
       # Step 3: 安装 pnpm
       # 安装 pnpm，这是一个快速、节省磁盘空间的包管理工具
