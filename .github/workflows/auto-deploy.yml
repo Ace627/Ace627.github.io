@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   deploy:
-  name: 自动部署为 GitPage 静态网站
+    name: 自动部署为 GitPage 静态网站
     # 定义工作运行的环境，这里使用的是最新的 Ubuntu 操作系统
     runs-on: ubuntu-latest
 
