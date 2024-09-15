@@ -15,6 +15,7 @@ permissions:
 
 jobs:
   deploy:
+    name: 自动部署为 GitPage 静态网站
     # 定义工作运行的环境，这里使用的是最新的 Ubuntu 操作系统
     runs-on: ubuntu-latest
 
@@ -25,36 +26,37 @@ jobs:
     steps:
       # Step 1: 检出仓库代码
       # 使用 actions/checkout@v4 检出代码库的内容到工作环境中
-      - name: Checkout repository
+      - name: 1、读取仓库内容
         uses: actions/checkout@v4
 
       # Step 2: 设置 Node.js 环境
       # 使用 actions/setup-node@v4 安装并配置指定版本的 Node.js 环境
-      - name: Setup Node.js
+      - name: 2、设置 Node.js 环境
         uses: actions/setup-node@v4
         with:
           node-version: '20' # 使用的 Node.js 版本
+          cache: 'pnpm'
 
       # Step 3: 安装 pnpm
       # 安装 pnpm，这是一个快速、节省磁盘空间的包管理工具
-      - name: Install pnpm
+      - name: 3、安装 pnpm
         run: npm install -g pnpm
 
       # Step 4: 安装依赖
       # 使用 pnpm 安装项目所需的依赖项
-      - name: Install dependencies
-        run: pnpm install
+      - name: 4、安装项目所需的依赖项
+        run: pnpm install --frozen-lockfile
 
       # Step 5: 构建项目
       # 使用 pnpm 运行构建脚本，生成生产环境的构建文件
-      - name: Build project
+      - name: 5、构建项目
         run: pnpm run build
 
       # Step 6: 部署到 GitHub Pages
       # 使用 peaceiris/actions-gh-pages@v4 部署构建文件到 GitHub Pages
-      - name: Deploy to GitHub Pages
+      - name: 6、部署到 GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.TOKEN }} # 使用 GitHub 提供的密钥进行身份验证
           publish_dir: dist # 指定构建输出目录，默认为 Vite 项目的 dist 目录
-          force_orphan: false # 是否使用孤立分支，避免与历史记录冲突
+          force_orphan: true # 是否使用孤立分支，避免与历史记录冲突
