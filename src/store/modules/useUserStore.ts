@@ -26,8 +26,6 @@ export default defineStore('user', () => {
     } catch (error) {
       console.log('退出登录失败: ', error)
     }
-
-    removeAccessToken()
   }
 
   return { token, avatar, roles, permissions, login, logout }
