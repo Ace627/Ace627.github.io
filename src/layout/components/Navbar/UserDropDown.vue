@@ -7,7 +7,7 @@
       <el-dropdown-menu>
         <el-dropdown-item>
           <IconFont name="VSCode" />
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/Ace627/ace627.github.io">访问源码</a>
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/Ace627/ace627.github.io">查看源码</a>
         </el-dropdown-item>
 
         <el-dropdown-item @click="userStore.logout()">

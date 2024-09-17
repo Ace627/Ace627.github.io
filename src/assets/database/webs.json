@@ -182,6 +182,12 @@
         "desc": "下一代前端工具链"
       },
       {
+        "title": "VitePress 中文文档",
+        "link": "https://vitepress.dev/zh",
+        "icon": "https://vitepress.dev/vitepress-logo-mini.png",
+        "desc": "由 Vite 和 Vue 驱动的静态站点生成器将 Markdown 变成优雅的文档，只需几分钟"
+      },
+      {
         "title": "Pnpm 中文网",
         "link": "https://www.pnpm.cn",
         "icon": "https://www.pnpm.cn/img/favicon.png",
@@ -351,7 +357,19 @@
         "title": "思古影视导航",
         "link": "https://sigu.app",
         "icon": "https://sigu.app/favicon.ico",
-        "desc": "思古影视线路检测中心，反应时间越小,打开就越快"
+        "desc": "思古影视线路检测中心，反应时间越小，打开就越快"
+      },
+      {
+        "title": "555影视发布页",
+        "link": "https://www.555dyy14.com",
+        "icon": "https://3d-platform-pro.obs.cn-south-1.myhuaweicloud.com/67964ea260a3f53ea7396904511a61bd.png",
+        "desc": "看电影，拯救世界！奈飞Netflix免费看，每天更新热火欧美日韩剧，最新韩国电影，在线免费电影网，VIP视频免费看！"
+      },
+      {
+        "title": "可可影视发布页",
+        "link": "https://dl.keke13.com:51111/index.html",
+        "icon": "https://vf.bbpeyi.cn/vod_dl_static_kkdy/images/favicon.ico",
+        "desc": "可可影视提供各种高清视频，每天更新包括有电影、电视剧、动漫、综艺、短剧等免费在线观看,致力于打造最全资源、更新快、高清全集且高速播放的观影平台"
       },
       {
         "title": "免费节点订阅",
