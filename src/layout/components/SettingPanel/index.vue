@@ -1,5 +1,5 @@
 <template>
-  <el-drawer v-model="settingStore.showSetting" :with-header="false" :size="260">
+  <el-drawer v-model="settingStore.showSetting" :with-header="false" :size="280">
     <h3 class="drawer-title">主题风格设置</h3>
 
     <div class="drawer-item">
@@ -30,21 +30,41 @@
         <el-option label="el-fade-in-linear" value="el-fade-in-linear"></el-option>
       </el-select>
     </div>
+
+    <el-divider />
+
+    <div class="flex-center">
+      <el-button size="small" plain type="primary" @click="handleSaveSetting" :icon="DocumentAdd">保存配置</el-button>
+      <el-button size="small" plain type="danger" @click="handleResetSetting" :icon="Refresh">重置配置</el-button>
+    </div>
   </el-drawer>
 </template>
 
 <script setup lang="ts">
 defineOptions({ name: 'SettingPanel' })
+import { Refresh, DocumentAdd } from '@element-plus/icons-vue'
 
 const settingStore = useSettingStore()
+const { showLoading, closeLoading } = useModal()
+
+function handleSaveSetting() {
+  showLoading('正在保存到本地，请稍候...')
+  settingStore.saveSetting()
+  setTimeout(() => closeLoading(), 1000)
+}
+function handleResetSetting() {
+  showLoading('正在清除设置缓存并刷新，请稍候...')
+  settingStore.resetSetting()
+  setTimeout(() => window.location.reload(), 1000)
+}
 </script>
 
 <style lang="scss" scoped>
 .drawer-title {
   margin-bottom: 12px;
-  color: rgba(0, 0, 0, 0.85);
-  font-size: 14px;
-  line-height: 22px;
+  color: var(--el-text-color-primary);
+  font-size: var(--el-font-size-base);
+  line-height: 1.5;
 }
 .drawer-item {
   display: flex;
@@ -52,9 +72,15 @@ const settingStore = useSettingStore()
   align-items: center;
   color: rgba(0, 0, 0, 0.65);
   font-size: 14px;
-  padding: 12px 0;
   .title {
     width: 100px;
   }
+}
+.drawer-item + .drawer-item {
+  margin-top: 10px;
+}
+
+.el-divider {
+  margin: 16px 0;
 }
 </style>
