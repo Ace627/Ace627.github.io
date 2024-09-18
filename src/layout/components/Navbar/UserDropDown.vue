@@ -9,6 +9,10 @@
           <IconFont name="VSCode" />
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/Ace627/ace627.github.io">查看源码</a>
         </el-dropdown-item>
+        <el-dropdown-item>
+          <IconFont name="VSCode" />
+          <RouterLink to="/About">关于我们</RouterLink>
+        </el-dropdown-item>
 
         <el-dropdown-item @click="userStore.logout()">
           <IconFont name="SwitchButton" />

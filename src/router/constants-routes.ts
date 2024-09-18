@@ -7,7 +7,7 @@ const patchRoutes = Object.keys(modules).map((key) => modules[key].default)
 /** 常驻路由 除了 redirect/403/404/login 等隐藏页面，其它页面建议设置 Name 属性 */
 export const constantRoutes: RouteRecordRaw[] = [
   {
-    path: '/login',
+    path: '/Login',
     name: 'Login',
     component: () => import('@/views/Login/index.vue'),
     meta: { title: '登录', hidden: true },
@@ -16,13 +16,19 @@ export const constantRoutes: RouteRecordRaw[] = [
   {
     path: '/',
     component: Layout,
-    redirect: '/dashboard',
+    redirect: '/Dashboard',
     children: [
       {
-        path: 'dashboard',
+        path: 'Dashboard',
         name: 'Dashboard',
         component: () => import(`@/views/Dashboard/index.vue`),
         meta: { title: '首页', icon: 'Home' },
+      },
+      {
+        path: 'About',
+        name: 'About',
+        component: () => import('@/views/System/About/index.vue'),
+        meta: { title: '关于', hidden: true },
       },
     ],
   },
