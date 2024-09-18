@@ -13,6 +13,14 @@
           <IconFont name="VSCode" />
           <RouterLink to="/About">关于我们</RouterLink>
         </el-dropdown-item>
+        <el-dropdown-item @click="settingStore.layout = 'classic'">
+          <IconFont name="VSCode" />
+          <span>传统布局</span>
+        </el-dropdown-item>
+        <el-dropdown-item @click="settingStore.layout = 'top'">
+          <IconFont name="VSCode" />
+          <span>顶部布局</span>
+        </el-dropdown-item>
 
         <el-dropdown-item @click="userStore.logout()">
           <IconFont name="SwitchButton" />
@@ -29,6 +37,7 @@ defineOptions({ name: 'UserDropDown' })
 const router = useRouter()
 const appStore = useAppStore()
 const userStore = useUserStore()
+const settingStore = useSettingStore()
 </script>
 
 <style lang="scss" scoped>
