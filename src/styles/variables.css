@@ -7,10 +7,16 @@
   --ap-sidebar-icon-size: 18px;
   --ap-sidebar-icon-gap: 6px;
   --ap-sidebar-bg-color: #262935;
-  --ap-sidebar-active-color: var(--el-color-primary);
-  --ap-sidebar-hover-color: var(--el-color-primary-light-3);
+  --ap-sidebar-active-color: var(--el-color-white);
+  --ap-sidebar-hover-color: var(--el-color-success);
   --ap-sidebar-text-color: var(--el-color-info-light-9);
   --ap-sidebar-item-height: 42px;
+
+  --ap-classic-menu-hover-bg-color: var(--el-color-primary-dark-2); /* 传统模式布局 */
+  --ap-classic-menu-active-color: var(--el-color-white);
+  --ap-classic-menu-active-bg-color: var(--el-color-primary);
+  --ap-top-menu-hover-text-color: var(--el-color-primary); /* 顶部布局 */
+  --ap-top-menu-active-color: var(--el-color-primary);
 
   /* Logo 的标题颜色 */
   --ap-logo-text-color: var(--el-border-color);

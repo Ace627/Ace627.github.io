@@ -50,4 +50,36 @@
 .custom-menu.layout-classic-menu {
   height: calc(100% - var(--ap-navbar-height));
   margin-top: var(--ap-navbar-height);
+
+  .el-menu-item.is-active {
+    color: var(--ap-classic-menu-active-color);
+    background-color: var(--ap-classic-menu-active-bg-color);
+  }
+  .el-menu-item:hover {
+    background-color: var(--ap-classic-menu-hover-bg-color);
+  }
+  .el-sub-menu .el-sub-menu__title:hover {
+    background-color: var(--ap-classic-menu-hover-bg-color);
+  }
+
+  /* 折叠状态下的菜单 */
+  &.el-menu--collapse {
+    .el-sub-menu.is-active .el-sub-menu__title {
+      color: var(--ap-classic-menu-active-color);
+      background-color: var(--ap-classic-menu-active-bg-color);
+    }
+    .el-sub-menu .el-sub-menu__title:hover {
+      background-color: var(--ap-classic-menu-hover-bg-color);
+    }
+  }
+}
+
+.custom-menu-popper.layout-classic-menu-popper {
+  .el-menu-item.is-active {
+    color: var(--ap-classic-menu-active-color);
+    background-color: var(--el-color-primary);
+  }
+  .el-menu-item:hover {
+    background-color: var(--ap-classic-menu-hover-bg-color);
+  }
 }

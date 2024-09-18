@@ -19,14 +19,24 @@
 }
 
 .custom-menu.layout-top-menu {
+  --el-menu-hover-text-color: var(--ap-top-menu-active-color);
+  --el-menu-active-color: var(--ap-top-menu-active-color);
+
   .el-menu-item:hover {
+    color: var(--ap-top-menu-hover-text-color);
+    background-color: transparent;
+  }
+  .el-sub-menu .el-sub-menu__title:hover {
+    color: var(--ap-top-menu-hover-text-color);
     background-color: transparent;
   }
 }
 .custom-menu-popper.layout-top-menu-popper {
   --el-menu-bg-color: #fff;
   --el-menu-text-color: var(--el-text-color-regular);
+  --el-menu-active-color: var(--ap-top-menu-active-color);
   .el-menu-item:hover {
+    color: var(--ap-top-menu-hover-text-color);
     background-color: transparent;
   }
 }

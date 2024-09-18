@@ -1,17 +1,5 @@
 /* 利用混合简化折叠与非折叠菜单左侧图标与右侧菜单文本的距离配置 */
 @mixin set-menu-title-left-gap($gap) {
-  /* 菜单项的鼠标 hover 样式与 active 样式 */
-  .el-menu-item {
-    &.is-active {
-      color: var(--ap-sidebar-active-color) !important;
-      background-color: transparent;
-    }
-    &:hover {
-      color: var(--ap-sidebar-hover-color);
-      background-color: var(--el-overlay-color-lighter);
-    }
-  }
-
   /* 菜单左侧图标与右侧菜单文本的距离 */
   .el-menu-item .title,
   .el-sub-menu__title .title {
