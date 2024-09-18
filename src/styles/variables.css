@@ -2,12 +2,18 @@
 
 :root {
   /* Sidebar */
-  --ap-width-sidebar: 220px;
+  --ap-sidebar-width: 220px;
+  --ap-sidebar-hide-width: 64px;
+  --ap-sidebar-icon-size: 18px;
+  --ap-sidebar-icon-gap: 6px;
   --ap-sidebar-bg-color: #262935;
   --ap-sidebar-active-color: var(--el-color-primary);
+  --ap-sidebar-hover-color: var(--el-color-primary-light-3);
   --ap-sidebar-text-color: var(--el-color-info-light-9);
   --ap-sidebar-item-height: 42px;
-  --ap-menu-preifix-icon-gap: 6px;
+
+  /* Logo 的标题颜色 */
+  --ap-logo-text-color: var(--el-border-color);
 
   /* Navbar */
   --ap-navbar-height: 50px;

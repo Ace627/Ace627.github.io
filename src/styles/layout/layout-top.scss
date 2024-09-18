@@ -1,0 +1,32 @@
+.layout-common.layout-top {
+  --ap-logo-text-color: var(--el-text-color-primary);
+
+  /* 内容区固定头部的基础样式 */
+  .fixed-header {
+    width: 100%;
+  }
+  /* 主体内容区基础样式 */
+  .app-main {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  .fixed-header + .app-main {
+    height: 100vh;
+    padding-top: var(--ap-header-height);
+    overflow-y: auto;
+  }
+}
+
+.custom-menu.layout-top-menu {
+  .el-menu-item:hover {
+    background-color: transparent;
+  }
+}
+.custom-menu-popper.layout-top-menu-popper {
+  --el-menu-bg-color: #fff;
+  --el-menu-text-color: var(--el-text-color-regular);
+  .el-menu-item:hover {
+    background-color: transparent;
+  }
+}

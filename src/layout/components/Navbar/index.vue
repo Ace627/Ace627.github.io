@@ -1,13 +1,13 @@
 <template>
   <div class="navbar flex items-center relative">
     <!-- 侧栏折叠控制 -->
-    <Hamburger class="navbar-item" v-if="appStore.isMobile" @toggleClick="appStore.toggleSidebar" />
+    <Hamburger class="navbar-item" v-if="appStore.isMobile || layout === 'classic'" @toggleClick="appStore.toggleSidebar" />
     <!-- 系统 Logo -->
-    <AppLogo />
+    <AppLogo v-if="layout !== 'classic'" />
     <!-- 面包屑导航 -->
-    <Breadcrumb v-if="appStore.isDesktop" class="ml-8px" />
+    <Breadcrumb v-if="appStore.isDesktop && layout === 'classic'" class="ml-8px" />
     <!-- 右侧水平菜单组件 -->
-    <Sidebar class="ml-auto flex-1 flex justify-end" v-if="appStore.isDesktop" mode="horizontal" />
+    <Sidebar class="ml-auto flex-1 flex justify-end" v-if="appStore.isDesktop && layout !== 'classic'" mode="horizontal" />
 
     <div class="right-nav h-full ml-auto flex-center">
       <UserDropDown class="navbar-item" />
@@ -17,23 +17,14 @@
 
 <script setup lang="ts">
 defineOptions({ name: 'Navbar' })
-import dayjs from 'dayjs'
+
 import Hamburger from './Hamburger.vue'
 import Breadcrumb from './Breadcrumb.vue'
 import UserDropDown from './UserDropDown.vue'
 import { AppLogo, Sidebar } from '@/layout/components'
 
 const appStore = useAppStore()
-const time = ref<string>()
-const week = ref<string>()
-
-function updateTime() {
-  week.value = `星期${['日', '一', '二', '三', '四', '五', '六'][dayjs().day()]}`
-  time.value = dayjs().format('YYYY-MM-DD HH:mm:ss')
-  window.requestAnimationFrame(updateTime)
-}
-
-updateTime()
+const { layout } = storeToRefs(useSettingStore())
 </script>
 
 <style lang="scss" scoped>

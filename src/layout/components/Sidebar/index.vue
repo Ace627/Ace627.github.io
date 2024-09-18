@@ -1,6 +1,8 @@
 <template>
   <aside>
-    <el-menu class="custom-menu" popper-class="custom-menu-popper" :defaultActive :collapse unique-opened :mode v-bind="$attrs" :collapse-transition="false">
+    <AppLogo v-if="settingStore.layout === 'classic'" />
+
+    <el-menu :class="menuClass" :popperClass :defaultActive :collapse unique-opened :mode v-bind="$attrs" :collapse-transition="false">
       <SidebarItem v-for="(route, index) in routeList" :key="index" :item="route" :basePath="route.path" />
     </el-menu>
   </aside>
@@ -8,6 +10,7 @@
 
 <script setup lang="ts">
 defineOptions({ name: 'Sidebar' })
+import { AppLogo } from '..'
 import SidebarItem from './SidebarItem.vue'
 
 const props = defineProps({
@@ -16,11 +19,14 @@ const props = defineProps({
 
 /** 读取 Pinia 仓库 */
 const appStore = useAppStore()
+const settingStore = useSettingStore()
 // const permissionStore = usePermission()
 /** 构建路由和路由器 */
 const route = useRoute()
 const router = useRouter()
 
+const menuClass = computed(() => `layout-${settingStore.layout}-menu custom-menu`)
+const popperClass = computed(() => `layout-${settingStore.layout}-menu-popper custom-menu-popper`)
 /** 计算当前侧边栏的开关状态 */
 const collapse = computed(() => !appStore.sidebar.opened)
 /** 计算当前激活路径 */

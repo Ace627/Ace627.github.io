@@ -12,6 +12,8 @@ export interface ProjectConfig {
   showColorWeakness: boolean
   /** 内容区域转场动效 */
   transitionName: 'fade-transform' | 'el-zoom-in-center' | 'el-zoom-in-top' | 'el-zoom-in-bottom' | 'el-fade-in-linear' | 'el-fade-in'
+  /** 布局模式 */
+  layout: 'classic' | 'top'
 }
 
 /** 默认配置 */
@@ -21,6 +23,7 @@ const defaultSettings: ProjectConfig = {
   showGreyMode: false,
   showColorWeakness: false,
   transitionName: 'fade-transform',
+  layout: 'top',
 }
 
 /** 合并后的配置 */

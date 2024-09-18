@@ -1,0 +1,53 @@
+.layout-common.layout-classic {
+  /* 主体内容区基础样式 */
+  .main-container {
+    position: relative;
+    height: 100%;
+    margin-left: var(--ap-sidebar-width);
+    transition: margin-left var(--el-transition-duration);
+  }
+
+  /* 内容区固定头部的基础样式 */
+  .fixed-header {
+    width: calc(100% - var(--ap-sidebar-width));
+  }
+  /* 主体内容区基础样式 */
+  .app-main {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  .fixed-header + .app-main {
+    height: 100vh;
+    padding-top: var(--ap-header-height);
+    overflow-y: auto;
+  }
+
+  /* 桌面模式 侧栏折叠 */
+  &.hide-sidebar {
+    .sidebar-container {
+      width: var(--ap-sidebar-hide-width);
+    }
+    .main-container {
+      margin-left: var(--ap-sidebar-hide-width);
+    }
+    .fixed-header {
+      width: calc(100% - var(--ap-sidebar-hide-width));
+    }
+  }
+
+  /* 移动端 侧边栏展开 */
+  &.mobile {
+    .fixed-header {
+      width: 100%;
+    }
+    .main-container {
+      margin-left: 0;
+    }
+  }
+}
+
+.custom-menu.layout-classic-menu {
+  height: calc(100% - var(--ap-navbar-height));
+  margin-top: var(--ap-navbar-height);
+}

@@ -1,6 +1,11 @@
 @use './variables.css'; // 全局 CSS 变量
 @use './transition.scss';
 @use './custom-element-plus/index.scss';
+
+@use './layout/layout-common.scss'; // 布局框架相关
+@use './layout/layout-top.scss';
+@use './layout/layout-classic.scss';
+
 @import 'nprogress/nprogress.css';
 @import '//at.alicdn.com/t/c/font_4611674_301vq4me9yj.css';
 
