@@ -13,13 +13,10 @@
           <IconFont name="VSCode" />
           <RouterLink to="/About">关于我们</RouterLink>
         </el-dropdown-item>
-        <el-dropdown-item @click="settingStore.layout = 'classic'">
+
+        <el-dropdown-item @click="settingStore.showSetting = true">
           <IconFont name="VSCode" />
-          <span>传统布局</span>
-        </el-dropdown-item>
-        <el-dropdown-item @click="settingStore.layout = 'top'">
-          <IconFont name="VSCode" />
-          <span>顶部布局</span>
+          <span>项目配置</span>
         </el-dropdown-item>
 
         <el-dropdown-item @click="userStore.logout()">

@@ -3,12 +3,16 @@
     <LayoutClassic v-if="settingStore.layout === 'classic'" />
     <LayoutTop v-else-if="settingStore.layout === 'top'" />
   </div>
+
+  <!-- 应用配置面板 -->
+  <SettingPanel />
 </template>
 
 <script setup lang="ts">
 defineOptions({ name: 'Layout' })
 import LayoutTop from './LayoutTop.vue'
 import LayoutClassic from './LayoutClassic.vue'
+import { SettingPanel } from './components'
 
 /** 读取 Pinia 仓库 */
 const appStore = useAppStore()
