@@ -38,7 +38,6 @@
 <script setup lang="ts">
 defineOptions({ name: 'LoginTemplate02' })
 import Cookies from 'js-cookie'
-import { useTemplateRef } from 'vue'
 import type { FormInstance, FormRules } from 'element-plus'
 import defaultCaptcha from '@/assets/images/no-captcha.png'
 

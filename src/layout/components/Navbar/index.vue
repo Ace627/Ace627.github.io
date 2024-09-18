@@ -2,16 +2,11 @@
   <div class="navbar flex items-center relative">
     <!-- 侧栏折叠控制 -->
     <Hamburger class="navbar-item" v-if="appStore.isMobile" @toggleClick="appStore.toggleSidebar" />
-
     <!-- 系统 Logo -->
     <AppLogo />
-
-    <!-- <div class="time">
-      <el-text type="success">{{ time }}</el-text>
-      <el-text type="primary">甲辰龙年</el-text>
-      <el-text type="danger">{{ week }}</el-text>
-    </div> -->
-
+    <!-- 面包屑导航 -->
+    <Breadcrumb v-if="appStore.isDesktop" class="ml-8px" />
+    <!-- 右侧水平菜单组件 -->
     <Sidebar class="ml-auto flex-1 flex justify-end" v-if="appStore.isDesktop" mode="horizontal" />
 
     <div class="right-nav h-full ml-auto flex-center">
@@ -24,6 +19,7 @@
 defineOptions({ name: 'Navbar' })
 import dayjs from 'dayjs'
 import Hamburger from './Hamburger.vue'
+import Breadcrumb from './Breadcrumb.vue'
 import UserDropDown from './UserDropDown.vue'
 import { AppLogo, Sidebar } from '@/layout/components'
 

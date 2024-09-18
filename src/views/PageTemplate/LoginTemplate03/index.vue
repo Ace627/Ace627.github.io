@@ -31,7 +31,6 @@
 
 <script setup lang="ts">
 defineOptions({ name: 'LoginTemplate03' })
-import { useTemplateRef } from 'vue'
 import type { FormInstance, FormRules } from 'element-plus'
 
 const { VITE_APP_TITLE } = useEnv()
