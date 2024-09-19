@@ -1,14 +1,5 @@
 <template>
   <div class="app-content">
-    <div class="mb-4">
-      <el-button>Default</el-button>
-      <el-button type="primary">Primary</el-button>
-      <el-button type="success">Success</el-button>
-      <el-button type="info">Info</el-button>
-      <el-button type="warning">Warning</el-button>
-      <el-button type="danger">Danger</el-button>
-    </div>
-
     <div class="list" v-for="(item, index) in webs" :key="index">
       <div class="list__title" @dblclick="downloadDatabase">{{ item.type }}</div>
       <AutoWrapList :min-width="150" :gap="16">
