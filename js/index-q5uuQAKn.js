@@ -1,0 +1,1 @@
+import{f as r,n,u as s,p as c,h as p}from"./vendor-CoMFgJKn.js";const d=r({name:"Redirect",__name:"index",setup(u){const e=s(),t=c(),{params:a,query:o}=e;return t.replace({path:`/${a.path}`,query:o}),(m,_)=>(p(),n("div"))}});export{d as default};
