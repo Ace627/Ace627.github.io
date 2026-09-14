@@ -18,6 +18,14 @@ return AjaxResult.success({ list, total }, '查询成功')
 return AjaxResult.error('参数错误', 400)
 ```
 
+## 异常处理
+
+业务代码只负责抛出异常，兜底转换交给全局异常过滤器：`BusinessException` 承载业务校验失败，`AllExceptionsFilter` 统一捕获翻译并返回标准结构，前端拦截器自动弹错。完整链路与异常翻译规则见 [异常处理](./exception)。
+
+## 参数验证
+
+参数验证由全局 `ValidationPipe` + DTO 上的 `class-validator` 装饰器声明完成，非法参数在进入 Controller 前即被拦截，校验规则与异常提示的衔接见 [参数验证](./validation)。
+
 ## 鉴权与权限
 
 - 除 `@Public()` 标记的公开路由外，所有接口默认经过 **JWT Guard** 校验登录态
@@ -25,6 +33,6 @@ return AjaxResult.error('参数错误', 400)
 - 接口级权限用 `@RequirePermissions`（权限码）或 `@RequireRoles`（角色编码）声明
 - 数据级权限按部门划分，由数据权限切面处理
 
-## 装饰器 / 注解
+## 增删改查
 
-框架内置了一套自定义装饰器，用于声明式处理鉴权、日志、缓存、限流等横切逻辑，完整清单与用法见 [装饰器 / 注解](./decorators)。
+一个业务模块的增删改查 = 后端三件套（DTO 校验、Controller 端点、Service 逻辑）+ 前端三件套（请求类、列表页、编辑弹窗），分页由 `PaginationDto` + `PaginationPipe` 统一换算，完整参考实现见 [增删改查](./crud)。

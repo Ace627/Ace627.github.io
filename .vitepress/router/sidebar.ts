@@ -22,7 +22,11 @@ export const sidebar: DefaultTheme.Sidebar = {
         {
           text: '后台手册',
           link: '/guide/backend',
-          items: [{ text: '装饰器 / 注解', link: '/guide/decorators' }],
+          items: [
+            { text: '增删改查', link: '/guide/crud' },
+            { text: '异常处理', link: '/guide/exception' },
+            { text: '参数验证', link: '/guide/validation' },
+          ],
         },
         { text: '组件文档', link: '/guide/components' },
         { text: '更新日志', link: '/guide/changelog' },
