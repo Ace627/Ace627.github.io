@@ -1,5 +1,31 @@
 # 前端手册
 
+## 目录与命名约定
+
+- 请求层放在 `src/api/`，文件名约定为 `*.request.ts`，与 `src/types/api/` 下的响应类型一一对应
+- 页面级组合式逻辑优先使用 `src/hooks/` 下的既有 Hook
+- 全局通用组件放在 `src/components/`，已全局注册（详见「组件文档」）
+- 路径别名 `@` 指向 `src` 目录
+
+## 请求封装
+
+基于 axios 封装的独立请求模块，统一处理：
+
+- **自动携带 Token**：请求拦截器从缓存读取访问令牌并注入请求头
+- **统一响应处理**：响应拦截器按 `AjaxResult` 结构拆包，非 200 状态码统一提示
+- **进度条联动**：`VITE_REQUEST_NPROGRESS` 开启后，请求期间顶部显示进度条
+- **防重复提交**：拦截器层面前后端呼应，拦截短时间内的重复请求
+- **超时控制**：`VITE_REQUEST_TIMEOUT` 全局控制（秒），`0` 表示无超时
+
+## 动态路由与权限
+
+登录后菜单由后端实时下发，前端动态生成路由：
+
+1. 路由守卫（`router.guard.ts`）检查白名单 → 校验 token → 拉取用户信息与菜单
+2. `router.helper.ts` 将后端扁平菜单递归建树，`import.meta.glob` 动态加载页面组件后 `addRoute` 注入
+3. 侧边栏根据 `permission` store 中的路由表渲染，目录 / 菜单 / 按钮三级粒度与后端权限码一一对应
+4. 路由模式由 `VITE_ROUTER_MODE` 控制（`history` / `hash`）
+
 ## 权限控制
 
 ```vue
@@ -13,20 +39,33 @@
 <el-link type="primary" v-permissions="['system:role:delete']">删除</el-link>
 ```
 
+## Hooks
+
+`src/hooks/` 下的组合式函数，已支持自动引入：
+
+| Hook              | 说明                                       |
+| ----------------- | ------------------------------------------ |
+| `useDict`         | 按字典类型编码拉取字典数据（见下文）       |
+| `useDynamicTitle` | 动态设置浏览器标题                         |
+| `useProgress`     | 路由 / 请求顶部进度条控制                  |
+| `useResize`       | 容器尺寸监听                               |
+| `useTheme`        | 明暗主题切换                               |
+
+## 自动导入
+
+项目通过 `unplugin-auto-import` 与 `unplugin-vue-components` 实现自动导入，无需手动 `import`：
+
+- Vue API：`ref`、`computed`、`watch`、`useTemplateRef` 等
+- Element Plus 组件：`<el-table>`、`<el-form>` 等按需自动引入
+- Store 与 Hook：`useAppStore`、`useDict` 等
+
 ## 图标使用
 
-```vue
-<!-- name：图标名称，对应 `@/assets/icons` 目录下的文件名，必填 -->
-<!-- color：图标颜色，可选，不传则继承父元素颜色 -->
-<!-- size：图标大小，可选，默认 1em，支持 px / em / rem 等单位 -->
-<!-- 该组件已全局注册，无需手动引入 -->
-<SvgIcon name="Search" />
-<SvgIcon name="Search" color="red" size="24px" />
-```
+`SvgIcon` 组件已全局注册，基于 `vite-plugin-svg-icons` 雪碧图方案，新增图标与改色等完整说明见 [图标使用](./svg-icon)。
 
 ## 提示弹窗
 
-`TipModal` 基于 `ElMessage` 封装，提供消息提示、通知、确认、加载等功能
+`TipModal` 基于 `ElMessage` 封装，提供消息提示、通知、确认、加载等功能，完整方法说明见 [提示弹窗](./tip-modal)。
 
 ```vue
 <script setup lang="ts">
@@ -57,39 +96,7 @@ TipModal.msgSuccess('成功反馈', { duration: 2000 })
 
 ## 缓存使用
 
-`CacheUtil` 基于 `localStorage` 实现，[**模拟 Redis 风格的键值存取**](https://mp.weixin.qq.com/s/miushZ-BDtrGo7_L4km8Hg)，方便前端开发者提前熟悉缓存操作模式，平滑向全栈过渡。
-
-```typescript
-// 1、定义缓存键名常量（统一管理，避免字面量散落）
-// CACHE_PREFIX 为项目级前缀，保证同一域名下不同项目的缓存隔离
-// apps\admin\src\common\constant\cache.constant.ts
-export const CacheConstant = {
-  /** 用户访问令牌的缓存键 */
-  ACCESS_TOKEN: `${CACHE_PREFIX}:ACCESS:TOKEN`,
-}
-
-// 2、按模块封装缓存方法（推荐，与后端 Service 层风格类似）
-// apps\admin\src\utils\cache\token.cache.ts
-import { CacheConstant } from '@/common'
-import { CacheUtil } from '../cache.util'
-
-export function setAccessToken(accessToken: string): void {
-  CacheUtil.set(CacheConstant.ACCESS_TOKEN, accessToken)
-}
-export function getAccessToken(): string | null {
-  return CacheUtil.get(CacheConstant.ACCESS_TOKEN)
-}
-export function removeAccessToken(): void {
-  CacheUtil.del(CacheConstant.ACCESS_TOKEN)
-}
-
-// 3、在 apps\admin\src\utils\index.ts 统一暴露
-export * from './cache/token.cache'
-
-// 也可以不封装模块直接使用 CacheUtil.set/get/del，
-// 但务必在 cache.constant.ts 中统一定义缓存键名，方便管理。
-// CacheUtil 支持字符串、数字、布尔、对象、数组等类型，并可设置过期时间（秒）。
-```
+`StorageCache` 基于 `localStorage` 封装，提供带过期时间（TTL）与统一键前缀的键值存取，业务侧通过 `src/utils/cache/` 下的领域封装方法使用，完整说明见 [本地缓存](./storage-cache)。
 
 ## 字典使用
 

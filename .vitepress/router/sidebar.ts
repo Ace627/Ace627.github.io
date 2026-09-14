@@ -5,62 +5,36 @@ import type { DefaultTheme } from 'vitepress'
 export const sidebar: DefaultTheme.Sidebar = {
   '/guide/': [
     {
-      text: '开始',
+      text: '文档',
       items: [
         { text: '简介', link: '/guide/introduction' },
-        { text: '快速上手', link: '/guide/quick-start' },
+        { text: '环境部署', link: '/guide/quick-start' },
+        { text: '项目介绍', link: '/guide/project' },
+        {
+          text: '前端手册',
+          link: '/guide/frontend',
+          items: [
+            { text: '提示弹窗', link: '/guide/tip-modal' },
+            { text: '本地缓存', link: '/guide/storage-cache' },
+            { text: '图标使用', link: '/guide/svg-icon' },
+          ],
+        },
+        {
+          text: '后台手册',
+          link: '/guide/backend',
+          items: [{ text: '装饰器 / 注解', link: '/guide/decorators' }],
+        },
+        { text: '组件文档', link: '/guide/components' },
         { text: '更新日志', link: '/guide/changelog' },
-        { text: '前端手册', link: '/guide/frontend.md' },
-        { text: '后端手册', link: '/guide/backend.md' },
       ],
     },
     {
       text: '其它',
       items: [
-        { text: '常见问题', link: '/guide/faq.md' },
-        { text: '常用脚本', link: '/guide/scripts.md' },
-        { text: '捐赠支持', link: '/guide/donate.md' },
-      ],
-    },
-  ],
-  '/codecopy/': [
-    {
-      text: 'TypeScript',
-      items: [
-        { text: '校验方法合集', link: '/codecopy/typescript/validate' },
-        { text: '复制文本到剪贴板', link: '/codecopy/typescript/copy-text' },
-        { text: 'ElMessage 二次封装', link: '/codecopy/typescript/tip-modal' },
-        { text: 'LocalStorage 二次封装', link: '/codecopy/typescript/cache-util' },
-      ],
-    },
-    {
-      text: '前端工程化',
-      items: [
-        { text: 'npmrc 配置参考', link: '/codecopy/engineering/npmrc' },
-        { text: 'Prettier 格式化配置', link: '/codecopy/engineering/prettierrc' },
-        { text: 'SVG 一键清理脚本', link: '/codecopy/engineering/svg-clean' },
+        { text: '常见问题', link: '/guide/faq' },
+        { text: '常用脚本', link: '/guide/scripts' },
+        { text: '捐赠支持', link: '/guide/donate' },
       ],
     },
   ],
 }
-// export const sidebar: DefaultTheme.Sidebar = [
-//   {
-//     text: '开始',
-//     items: [
-//       { text: '简介', link: '/guide/introduction' },
-//       { text: '快速上手', link: '/guide/quick-start' },
-//       { text: '前端手册', link: '/document/frontend.md' },
-//       { text: '后端手册', link: '/document/backend.md' },
-//       { text: '前端面试题', link: '/interview/frontend.md' },
-//       { text: '技能说明', link: '/guide/skills.md' },
-//       { text: '更新日志', link: '/guide/changelog' },
-//     ],
-//   },
-//   {
-//     text: '其它',
-//     items: [
-//       { text: '常见问题', link: '/other/faq.md' },
-//       { text: '捐赠支持', link: '/other/donate.md' },
-//     ],
-//   },
-// ]

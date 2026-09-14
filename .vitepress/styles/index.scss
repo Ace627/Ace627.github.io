@@ -14,3 +14,26 @@
   font-family: 'LXGW WenKai', Arial, sans-serif;
   text-align: justify;
 }
+
+// 导航栏标题较长会挤占搜索框，缩小字号保证完整一行展示
+.VPNavBarTitle .title {
+  font-size: 13px;
+}
+
+// Hero 区英文项目名较长，默认 56px 会折行，缩小字号保证一行展示
+.VPHero .name {
+  font-size: clamp(28px, 4vw, 38px);
+  line-height: 1.25;
+}
+.VPHero .text {
+  font-size: clamp(26px, 4vw, 36px);
+}
+@media (min-width: 960px) {
+  .VPHero .name {
+    white-space: nowrap;
+  }
+  // 更新日志页要求每条一行展示（配合页内精简文案，窄屏恢复折行避免溢出）
+  .page-changelog .vp-doc li {
+    white-space: nowrap;
+  }
+}

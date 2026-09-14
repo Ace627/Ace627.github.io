@@ -2,15 +2,15 @@
 
 ## 本地构建镜像并推送至私有仓库
 
-需要提前搭建好私有 Docker 仓库，例如 Docker Registry
+需要提前搭建好私有 Docker 仓库，例如 Docker Registry。在仓库根目录执行：
 
 ```bash
 #!/bin/bash
 set -e
 
 REGISTRY_IP="172.17.16.48:5000"
-RETRY_MAX=32  # 最多重试 32 次
-RETRY_DELAY=5  # 每次重试间隔 5 秒
+RETRY_MAX=32      # 最多重试 32 次
+RETRY_DELAY=5     # 每次重试间隔 5 秒
 CLEANUP_ENABLED=true  # 推送完成后是否清除无用镜像（dangling images）
 
 GREEN="\033[32m"
@@ -36,22 +36,16 @@ retry_push() {
 }
 
 echo -e "${GREEN}🚀 构建镜像...${NC}"
-# DOCKER_BUILDKIT=0 docker-compose build server admin
-docker-compose build server admin
+# 需要仓库根目录已配置好 .env（MYSQL_PASSWORD / JWT_SECRET）
+docker compose build server
 
 echo -e "${GREEN}🏷 打标签...${NC}"
-docker tag yunhe-vue/server:latest ${REGISTRY_IP}/yunhe-vue/server:latest
-docker tag yunhe-vue/admin:latest ${REGISTRY_IP}/yunhe-vue/admin:latest
+docker tag nest-admin-server:latest ${REGISTRY_IP}/nest-admin/server:latest
 
 echo -e "${GREEN}📤 开始推送 server 镜像...${NC}"
-retry_push "${REGISTRY_IP}/yunhe-vue/server:latest"
+retry_push "${REGISTRY_IP}/nest-admin/server:latest"
 
-sleep 5  # 间隔 5 秒，给网络喘息时间
-
-echo -e "${GREEN}📤 开始推送 admin 镜像...${NC}"
-retry_push "${REGISTRY_IP}/yunhe-vue/admin:latest"
-
-echo -e "${GREEN}🎉 全部推送完成！宝塔直接部署！${NC}"
+echo -e "${GREEN}🎉 全部推送完成！服务器直接部署！${NC}"
 
 if [ "$CLEANUP_ENABLED" = "true" ]; then
   echo -e "${GREEN}🧹 清除无用镜像...${NC}"
@@ -71,10 +65,10 @@ fi
 set -euo pipefail
 
 # ==================== 配置项 ====================
-MYSQL_CONTAINER="mysql"                                # MySQL 容器名称
+MYSQL_CONTAINER="nest-admin-mysql"                     # MySQL 容器名称
 MYSQL_USER="root"                                      # 数据库用户（容器内 MYSQL_ROOT_PASSWORD 环境变量提供密码）
 COMPRESS="false"                                       # 是否压缩备份（true 生成 .sql.gz）
-BACKUP_DIR="/www/wwwroot/smart-mfg-biweekly-pms/backups" # 备份文件存放目录
+BACKUP_DIR="/www/backup/nest-admin"                    # 备份文件存放目录
 CLEAN_OLD_BACKUPS="true"                               # 是否自动清理旧备份
 RETENTION_DAYS="7"                                     # 保留最近 N 天的备份
 

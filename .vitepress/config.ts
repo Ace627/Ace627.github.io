@@ -4,8 +4,8 @@ import { navbar, sidebar } from './router'
 export default defineConfig({
   // 站点级选项
   lang: 'zh-CN',
-  title: '云禾管理系统',
-  description: 'Just playing around.',
+  title: 'NestJS Admin Template',
+  description: '基于 Vue 3 + NestJS 11 全 TypeScript 技术栈的中后台管理系统模板',
   head: [
     ['link', { rel: 'stylesheet', href: 'https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-webfont/1.6.0/style.min.css' }],
     ['link', { rel: 'icon', href: '/images/logo.png' }],
@@ -36,8 +36,7 @@ export default defineConfig({
       next: '下一页',
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/Ace627/YunHe-Vue' },
-      { icon: 'gitee', link: 'https://gitee.com/decade9527/YunHe-Vue' },
+      { icon: 'gitee', link: 'https://gitee.com/decade9527/nestjs-admin-template' },
     ],
     search: {
       provider: 'local',

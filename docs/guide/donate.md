@@ -22,7 +22,7 @@
 ## 其它支持方式
 
 - ⭐ 给项目点个 **Star** —— 让更多开发者发现它
-- 🔗 访问项目主页 —— [GitHub](https://github.com/Ace627/YunHe-Vue) / [Gitee](https://gitee.com/decade9527/YunHe-Vue)
+- 🔗 访问项目主页 —— [Gitee](https://gitee.com/decade9527/nestjs-admin-template)
 - 🐛 提交 **Issue** 或 **PR** —— 帮助项目变得更好
 - 📢 分享文档 —— 向朋友或团队推荐本项目
 

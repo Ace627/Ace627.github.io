@@ -1,3 +1,16 @@
 dist
 node_modules
 .vitepress/cache
+
+# AI 协作数据，不开源
+.trae
+.qwen
+.qoder
+.codex
+.cline
+.cursor
+.claude
+.gemini
+.opencode
+.codebuddy
+.workbuddy

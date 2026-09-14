@@ -2,9 +2,9 @@
 layout: home
 
 hero:
-  name: 云禾管理系统
-  text: 前端进阶全栈的第一站
-  tagline: Vue 3 + NestJS + TypeScript · Monorepo 全栈一体化
+  name: NestJS Admin Template
+  text: 全 TypeScript 中后台管理系统模板
+  tagline: Vue 3 + Element Plus + NestJS 11 + TypeORM · 权限模型完整落地 · 容器化开箱可用
   image:
     src: /images/logo.png
     alt: logo
@@ -13,29 +13,26 @@ hero:
       text: 🚀 快速开始
       link: /guide/introduction
     - theme: alt
-      text: 👀 在线预览
-      link: https://cnbox.online
-    - theme: alt
-      text: 📢 交流群
-      link: http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=nipJqdnRrHgP7jjLJzbuGwyayLaqrrVA&authKey=MuJj6WXuUP4QQTvs4fMAx1Pw4skUXSLYbvXVXi2X878%2FhmgrD1dxd%2BaXrHK8%2FRb6&noverify=0&group_code=1041747918
+      text: 📮 接口文档
+      link: https://docs.apipost.net/docs/detail/61e0debdacca000?target_id=0
 
 features:
   - icon: 🧩
-    title: 全栈 Monorepo
-    details: pnpm workspace 统一管理前后端，一次 install 到位，共享 TypeScript 类型定义。
-  - icon: 🎯
-    title: 为前端设计
-    details: NestJS 的模块化、装饰器、依赖注入与 Vue 3 一脉相承。你会 Vue 就会后端。
-  - icon: 📖
-    title: 代码即教程
-    details: 每个模块都是完整的前后端协作范例，注释完整、类型严格，从 CRUD 到消息队列逐级进阶。
+    title: 前后端同仓库
+    details: admin/ 与 server/ 两个独立工程放在同一仓库，互不干扰，可以单独构建、单独部署，全栈 TypeScript 类型一致。
+  - icon: 🔐
+    title: 权限模型完整落地
+    details: RBAC 用户 / 角色 / 菜单三级权限体系，菜单、按钮、接口三级粒度鉴权，支持按部门划分数据权限。
+  - icon: 📦
+    title: 中后台标配功能
+    details: 字典管理、文件管理（分片 / 秒传 / 断点续传）、服务与缓存监控、在线用户、定时任务、操作与登录日志。
   - icon: 🚀
-    title: 开箱即用
-    details: Docker 一条命令启动全套环境，ESLint + Prettier + BEM 规范预置，容器化部署开箱即用。
+    title: 容器化开箱可用
+    details: Docker Compose 一条命令拉起 NestJS + MySQL + Redis，多阶段构建、健康探针、非 root 运行全配好。
   - icon: 📊
     title: 生产级监控
-    details: 实时 CPU / 内存 / 磁盘监控，Redis 缓存可视化管理，操作日志与定时任务动态调度。
+    details: 实时 CPU / 内存 / 磁盘监控，Redis 缓存可视化管理，数据库连接池监视，操作日志全接口自动记录。
   - icon: 🎨
     title: 暗黑模式
-    details: CSS 变量全局控制，一键切换明暗主题，响应式布局适配 PC / Pad / Mobile 三端。
+    details: CSS 变量全局控制，一键切换明暗主题，多标签页与响应式布局适配 PC / Pad / Mobile 三端。
 ---
