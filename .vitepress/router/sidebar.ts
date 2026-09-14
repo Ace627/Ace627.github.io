@@ -13,6 +13,7 @@ export const sidebar: DefaultTheme.Sidebar = {
         {
           text: '前端手册',
           link: '/guide/frontend',
+          collapsed: true,
           items: [
             { text: '提示弹窗', link: '/guide/tip-modal' },
             { text: '本地缓存', link: '/guide/storage-cache' },
@@ -26,6 +27,7 @@ export const sidebar: DefaultTheme.Sidebar = {
         {
           text: '后台手册',
           link: '/guide/backend',
+          collapsed: true,
           items: [
             { text: '增删改查', link: '/guide/crud' },
             { text: '异常处理', link: '/guide/exception' },
@@ -38,7 +40,17 @@ export const sidebar: DefaultTheme.Sidebar = {
     {
       text: '其它',
       items: [
-        { text: '常见问题', link: '/guide/faq' },
+        {
+          text: '常见问题',
+          link: '/guide/faq',
+          collapsed: true,
+          items: [
+            { text: '如何新增系统图标', link: '/guide/faq#如何新增系统图标' },
+            { text: '如何调整左侧菜单宽度', link: '/guide/faq#如何调整左侧菜单宽度' },
+            { text: '如何更换后端请求地址', link: '/guide/faq#如何更换后端请求地址' },
+            { text: '如何设置接口的超时时间', link: '/guide/faq#如何设置接口的超时时间' },
+          ],
+        },
         { text: '常用脚本', link: '/guide/scripts' },
         { text: '捐赠支持', link: '/guide/donate' },
       ],
