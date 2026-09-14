@@ -1,6 +1,6 @@
 # 组件文档
 
-以下组件位于 `admin/src/components/`，已在 `src/plugins/modules/global-component.ts` 中全局注册，任意页面可直接使用，无需手动引入。
+以下组件位于 `admin/src/components/`，已在 `src/plugins/modules/global-component.ts` 中全局注册，任意页面可直接使用，无需手动引入。如何新增一个全局组件，见 [全局组件](./global-component)。
 
 | 组件           | 说明                                     |
 | -------------- | ---------------------------------------- |

@@ -51,6 +51,8 @@
 | `useResize`       | 容器尺寸监听                               |
 | `useTheme`        | 明暗主题切换                               |
 
+动态标题的完整说明（工作原理 / 标题来源 / 开关配置）见 [动态标题](./dynamic-title)。
+
 ## 自动导入
 
 项目通过 `unplugin-auto-import` 与 `unplugin-vue-components` 实现自动导入，无需手动 `import`：
@@ -100,21 +102,7 @@ TipModal.msgSuccess('成功反馈', { duration: 2000 })
 
 ## 字典使用
 
-```vue
-<template>
-  <!-- 表格回显：DictTag 已全局注册，传入选项和值即可 -->
-  <DictTag :options="sys_normal_disable" :value="row.status" />
-  <!-- 下拉选择 -->
-  <el-select :options="sys_normal_disable" />
-  <!-- 单选组 -->
-  <el-radio-group :options="sys_normal_disable" />
-</template>
-
-<script setup lang="ts">
-// useDict 已支持自动引入，传入字典类型编码即可
-const { sys_normal_disable, sys_user_gender } = useDict('sys_normal_disable', 'sys_user_gender')
-</script>
-```
+`useDict` 按字典类型编码加载选项，`DictTag` 回显字典标签，两者均已自动导入。下拉选择、表格回显、缓存刷新等完整说明见 [字典使用](./dict-use)。
 
 ## 表格使用
 

@@ -17,6 +17,10 @@ export const sidebar: DefaultTheme.Sidebar = {
             { text: '提示弹窗', link: '/guide/tip-modal' },
             { text: '本地缓存', link: '/guide/storage-cache' },
             { text: '图标使用', link: '/guide/svg-icon' },
+            { text: '动态标题', link: '/guide/dynamic-title' },
+            { text: '字典使用', link: '/guide/dict-use' },
+            { text: '全局组件', link: '/guide/global-component' },
+            { text: '组件文档', link: '/guide/components' },
           ],
         },
         {
@@ -28,7 +32,6 @@ export const sidebar: DefaultTheme.Sidebar = {
             { text: '参数验证', link: '/guide/validation' },
           ],
         },
-        { text: '组件文档', link: '/guide/components' },
         { text: '更新日志', link: '/guide/changelog' },
       ],
     },
