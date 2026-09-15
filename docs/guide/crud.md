@@ -388,5 +388,5 @@ function handleEdit(row: User.SysUser) {
 | 移动端适配 | 小屏自动精简 layout 为 `total, prev, jumper, next`、页码按钮减为 5 个 |
 
 ::: tip 设计说明
-本项目未引入 PageHelper 类的分页插件，而是显式管道换算 + TypeORM `skip / take`，分页参数的流向（query → skip/take → SQL）全部可见，无隐式状态，也不存在「分页参数必须与查询严格相邻」的隐性约束。
+本项目不做分页插件的隐式封装，而是显式管道换算 + TypeORM `skip / take`，分页参数的流向（query → skip/take → SQL）全部可见，无隐式状态。
 :::
