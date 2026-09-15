@@ -12,7 +12,7 @@ export const sidebar: DefaultTheme.Sidebar = {
         { text: '项目介绍', link: '/guide/project' },
         {
           text: '前端手册',
-          link: '/guide/frontend',
+          link: '/guide/tip-modal',
           collapsed: true,
           items: [
             { text: '提示弹窗', link: '/guide/tip-modal' },
@@ -26,7 +26,7 @@ export const sidebar: DefaultTheme.Sidebar = {
         },
         {
           text: '后台手册',
-          link: '/guide/backend',
+          link: '/guide/crud',
           collapsed: true,
           items: [
             { text: '增删改查', link: '/guide/crud' },

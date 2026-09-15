@@ -21,21 +21,6 @@ nestjs-admin-template
 - 可以单独构建、单独部署，也可以用根目录 Dockerfile / compose 一并交付
 - 根目录共用一份 `prettier.config.cjs`，保证前后端代码风格统一
 
-## 技术架构
-
-```
-浏览器
-  │  Nginx 反向代理 /api
-  ▼
-NestJS 11（server）                      Vue 3 + Vite 8（admin）
-  ├─ Guard    JWT 鉴权 / 权限码校验        ├─ Pinia 状态管理
-  ├─ Interceptor 日志 / 响应缓存 / 防重提交 ├─ Vue Router 动态路由
-  ├─ Module   system / monitor / auth      ├─ Element Plus 按需导入
-  ├─ TypeORM  实体映射 MySQL 8             ├─ UnoCSS + SCSS 主题
-  ├─ ioredis  缓存 / 会话 / BullMQ 队列     └─ ECharts 图表
-  └─ Winston  按日滚动文件日志
-```
-
 ## 前端目录结构
 
 ```

@@ -35,9 +35,7 @@ export default defineConfig({
       prev: '上一页',
       next: '下一页',
     },
-    socialLinks: [
-      { icon: 'gitee', link: 'https://gitee.com/decade9527/nestjs-admin-template' },
-    ],
+    socialLinks: [{ icon: 'gitee', link: 'https://gitee.com/decade9527/nestjs-admin-template' }],
     search: {
       provider: 'local',
       options: {
